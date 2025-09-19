@@ -3,15 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>William Morales</title>
+  <!-- React + ReactDOM from CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Babel for JSX support -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-  <h1>William Morales</h1>
-  <p>
-    I'm a student studying at Louisiana State University, majoring in Computer Science with a special focus on Data Analytics and Computational Linguistics.
-  </p>
-  <img src="./image/photo-of-me.png" alt="A photo of myself" width="400">
-  <p>
-    If you need to contact me, please do so at <a href="mailto:wsmbuis5224@gmail.com">wsmbuis5224@gmail.com</a>.
-  </p>
+  <!-- React will render everything inside this div -->
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function App() {
+      return (
+        <div>
+          <h1>William Morales</h1>
+          <p>
+            I'm a student studying at Louisiana State University, 
+            majoring in Computer Science with a special focus on 
+            Data Analytics and Computational Linguistics.
+          </p>
+          <img src="./image/photo-of-me.png" alt="A photo of myself" width="400" />
+          <p>
+            If you need to contact me, please do so at{" "}
+            <a href="mailto:wsmbuis5224@gmail.com">wsmbuis5224@gmail.com</a>.
+          </p>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
 </body>
 </html>
