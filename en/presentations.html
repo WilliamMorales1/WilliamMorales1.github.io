@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>William Morales</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar will load here -->
+  <div id="navbar"></div>
+
+  <div class="container mt-4">
+    <h2>Conference Presentations</h2>
+  <ul>
+  <li>2024 — Summer Undergraduate Research Forum<br>
+    <em>Presentation:</em> A Sociolinguistic Study of Intensification in the Spanish of Louisianian Puerto Ricans
+  </li>
+  <li>2025 — Department of Communication Sciences and Disorders Roundtable<br>
+    <em>Presentation:</em> Effect of dialectal variation on listeners' perception of English interdental fricatives and lateral liquid sounds
+  </li>
+  <li>2025 — Seventh Annual Tulane Conference on Linguistics<br>
+    <em>Presentation:</em> A Sociolinguistic Study of Spanish Intensifiers across two Dialects
+  </li>
+  <li>2025 — The Fifth Annual Emory Undergraduate Linguistics Conference<br>
+    <em>Presentation:</em> A Variationist Analysis of Intensification in Spanish
+  </li>
+  <li>2025 — The 12th Annual LSU Discover Day – Undergraduate Research & Creativity Conference<br>
+    <em>Presentation:</em> A Sociolinguistic Study of Intensification in the Spanish of Louisianian Puerto Ricans
+  </li>
+  <li>2025 — 188th Meeting of the Acoustical Society of America joint with 25th International Congress on Acoustics<br>
+    <em>Presentation:</em> Effect of dialectal variation on listeners' perception of English interdental fricatives and lateral liquid sounds
+  </li>
+    </ul>
+  </div>
+
+  <!-- Bootstrap JS (for dropdown/toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Load Navbar dynamically -->
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

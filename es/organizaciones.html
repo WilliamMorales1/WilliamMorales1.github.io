@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>William Morales</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar will load here -->
+  <div id="navbar"></div>
+
+  <div class="container mt-4">
+    <h2>Organizaciones Académicas</h2>
+    <ul>
+    <li>2024-2025 — Coordinador de los Eventos, El Grupo de la Lengua Árabe, LSU</li>
+    <li>2024-2025 — Vicepresidente, Asociación Lingüística de Estudiantes, LSU</li>
+    <li>2024-2025 — Historiador, El Grupo de Francés (Le Cercle Français), LSU</li>
+    <li>2025-pres. — Presidente, Asociación Lingüística de Estudiantes</li>
+    <li>2025-pres. — Vicepresidente, El Grupo de Kreyol (Organizasyon Langaj é Lakilchi Kréyol Lalwizyàn)</li>
+    </ul>
+  </div>
+
+  <!-- Bootstrap JS (for dropdown/toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Load Navbar dynamically -->
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

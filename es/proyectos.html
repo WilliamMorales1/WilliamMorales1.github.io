@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>William Morales</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar will load here -->
+  <div id="navbar"></div>
+
+  <div class="container mt-4">
+    <h2>Proyectos</h2>
+  <ul>
+  <li>2023 — Society of Asian Scientists & Engineers’ 2nd Annual Hackathon</li>
+  <li>2023 — Student Linguistic Association: Jill Brody’s Linguistic Meetup Day</li>
+  <li>2025 — Semester-long website project in Object-Oriented Design course</li>
+  <li>2025 — Application for learning and preserving Louisiana Creole</li>
+  </ul>
+  </div>
+
+  <!-- Bootstrap JS (for dropdown/toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Load Navbar dynamically -->
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
