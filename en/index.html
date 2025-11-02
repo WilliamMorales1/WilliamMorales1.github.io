@@ -1,32 +1,239 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Home | William Morales</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-  <!-- Navbar will load here -->
-  <div id="navbar"></div>
+<!DOCTYPE HTML>
 
-  <div class="container mt-4">
-    <h1>William Morales</h1>
-    <p>I'm a student at LSU majoring in Computer Science with minors in Linguistics and Spanish.</p>
-    </p> <img src="../images/photo-of-me.png" alt="A photo of myself" width="200" /> 
-    <p>If you need to contact me, please do so at <a href="mailto:wsmbuis5224@gmail.com">wsmbuis5224@gmail.com</a>.
-  </div>
+<!-- TODO: ADD DROPDOWN FOR TRANSLATIONS (ES, FR)-->
 
-  <!-- Bootstrap JS (for dropdown/toggler) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<html>
+	<head>
+		<title>William Morales</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<button id="dark-mode-toggle" title="Toggle Dark Mode">
+			<span class="icon solid fa-moon"></span>
+		</button>
 
-  <!-- Load Navbar dynamically -->
-  <script>
-    fetch("navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-      });
-  </script>
-</body>
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="../images/avatar.png" alt="" /></span>
+					<h1 id="logo">William Morales</h1>
+					<p>Interested in all things<br>Linguistics and Data Science</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#aboutme" class="active">About Me</a></li>
+						<li><a href="#education">Education</a></li>
+						<li><a href="#profdev">Professional Development</a></li>
+						<li><a href="#currentwork">I'm Currently Working On</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://github.com/WilliamMorales1" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:wsmbuis5224@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.instagram.com/hydragon123/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</footer>
+
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- About Me -->
+							<section id="aboutme">
+								<div class="image main" data-position="center">
+									<img src="../images/Primary_Human_Languages.png" alt="" id="languages-map-image" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>Hi, Hola, 你好！</h2>
+										<p>I'm a Computer Science undergraduate student at Lousiana State University, and I'm always looking forward for any new projects and research.</p>
+									</header>
+									<p>Since a young age, I've always been very interested in learning other languages, which lead me to start learning about what things like Syntax Trees and Logographies are way before starting formal linguistics classes. I also had an early interest in "codes," both machine code but also simple methods of encryption, which lead me to start learning Python before I had even decided on my major. These interests have really transformed my life, making me able to have the opportunities to do some fun research, meet some really cool people, and continuously learn more and more things along the way. <b>I like to do a lot of things, as long as I think it will be interesting to me. So, if you need to contact me about anything, you can message me at <a href="mailto:wsmbuis5224@gmail.com">wsmbuis5224@gmail.com</a>.</b></p>
+								</div>
+							</section>
+						
+						<!-- Education -->
+							<section id="education">
+								<div class="container">
+									<h3>Academic History</h3>
+									<p>I'm an Honors Junior at LSU. Below you can find more details about my education and some notable classes relating to each. I have also done lots of research at LSU, and you can find further details about that in the section below. If you would like to contact me about anything specifically regarding LSU, please do so at: <a href="mailto:wmoral2@lsu.edu">wmoral2@lsu.edu</a></p>
+									<div class="features">
+										<article>
+											<a href="https://www.lsu.edu/eng/cse/programs/undergraduate_program/undergraduate_major.php" class="image"><img src="../images/compsci.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>B.Sc. in Computer Science</h4>
+												<p>Fall 2023 - present<br>
+													Concentration in Data Science<br>
+													Louisiana State University<br>
+													Notable Classes:<br>
+													&emsp;CSC 4402 - Database Systems<br>
+													&emsp;CSC 4330 - Software Systems Development
+												</p>
+											</div>
+										</article>
+										<article>
+											<a href="https://www.lsu.edu/hss/linguistics/index.php" class="image"><img src="../images/ling.png" alt="" /></a>
+											<div class="inner">
+												<h4>Minor in Linguistics</h4>
+												<p>Fall 2023 - present<br>
+													Louisiana State University<br>
+													Notable Classes:<br>
+													&emsp;LING 3150 - Phonetics<br>
+													&emsp;LING 4750 - Independent Research in Speech Science or Linguistics
+												</p>
+											</div>
+										</article>
+										<article>
+											<a href="https://www.lsu.edu/hss/wllc/spanish/undergraduate.php" class="image"><img src="../images/span.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>Minor in Spanish</h4>
+												<p>Fall 2023 - present<br>
+													Louisiana State University<br>
+													Notable Classes:<br>
+													&emsp;SPAN 4005 - Structure of the Spanish Language<br>
+													&emsp;SPAN 4917 - Independent Research in Spanish or Spanish-American Linguistics
+												</p>
+											</div>
+										</article>
+										<article>
+											<a href="https://www.lsu.edu/honors/index.php" class="image"><img src="../images/ogden.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>College Honors</h4>
+												<p>Fall 2023 - present<br>
+													Louisiana State University<br>
+													Notable Classes:<br>
+													&emsp;HNRS 2020 - Brazilian Culture and Society<br>
+													&emsp;MATH 1553 - Honors Analytic Geometry and Calculus II
+												</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Professional Development -->
+							<section id="profdev">
+								<div class="container">
+									<h3>Research, Presentations, Clubs and more!</h3>
+
+									<h4>Research at LSU</h4>
+									<h5>Tracking a Linguistic Innovation: A Sociolinguistic Investigation of Intensifiers in Three Spanish-speaking Communities</h5>
+									<p>
+										Mentor: Dr. Rafael Orozco<br>
+										Fall 2023 - present<br>
+										We are working on researching intensifiers in Spanish and comparing that data to other sociolinguistic phenomena. I created my own algorithm to collect and analyze data of intensifiers in transcripts of Spanish dialects. We are currently working to get it published. 
+									</p>
+									<h5>Effect of dialectal variation on listeners' perception of English interdental fricatives and lateral liquid sounds</h5>
+									<p>
+										Mentors: Dr. Hunju Chung & Dr. Irina Shport<br>
+										Spring 2024 - present<br>
+										We worked together to to test the perception of sounds according to different English Dialects. I primarily worked on categorizing the stimuli, making the Qualtrics survey. Right now, I am helping to make any changes to Praat scripts that they may need, and helping with acoustic analysis. We are also currently working to get the study published. 
+									</p>
+
+									<h4>Conference Presentations</h4>
+									<ul>
+										<li>
+											Summer Undergraduate Research Forum, 2024<br>
+											<em>Presentation:</em> A Sociolinguistic Study of Intensification in the Spanish of Louisianian Puerto Ricans
+										</li>
+										<li>
+											Department of Communication Sciences and Disorders Roundtable, 2025<br>
+											<em>Presentation:</em> Effect of dialectal variation on listeners' perception of English interdental fricatives and lateral liquid sounds
+										</li>
+										<li>
+											Seventh Annual Tulane Conference on Linguistics (T-CoL), 2025<br>
+											<em>Presentation:</em> A Sociolinguistic Study of Spanish Intensifiers across two Dialects
+										</li>
+										<li>
+											The Fifth Annual Emory Undergraduate Linguistics Conference, 2025<br>
+											<em>Presentation:</em> A Variationist Analysis of Intensification in Spanish
+										</li>
+										<li>
+											The 12th Annual LSU Discover Day Undergraduate Research & Creativity Conference, 2025<br>
+											<em>Presentation:</em> A Sociolinguistic Study of Intensification in the Spanish of Louisianian Puerto Ricans
+										</li>
+										<li>
+											188th Meeting of the Acoustical Society of America (ASA), 2025<br>
+											<em>Presentation:</em> Effect of dialectal variation on listeners' perception of English interdental fricatives and lateral liquid sounds
+										</li>
+										<br>
+										Some images of me presenting at T-CoL, Discover Day (2025), and ASA respectively:
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="../images/tcol.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="../images/discday.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="../images/lsa.jpg" alt="" /></span></div>
+										</div>
+									</ul>
+									
+  									<h4>Clubs & Academic Organizations at LSU</h4>
+									<ul>
+										<li>Event Coordinator, <a href="https://tigerlink.lsu.edu/arabiclangclub/home/Arabic">Arabic Language Club</a>, 2024-2025</li>
+										<li>Vice-President, <a href="https://tigerlink.lsu.edu/sla/home/">Student Linguistics Association</a>, 2024-2025</li>
+										<li>Historian, <a href="https://tigerlink.lsu.edu/lecerclef/home/">French Club (Le Cercle Français)</a>, 2024-2025</li>
+										<li>President, <a href="https://tigerlink.lsu.edu/sla/home/">Student Linguistics Association</a>, 2025-present</li>
+										<li>Vice-President, <a href="https://tigerlink.lsu.edu/lclcc/home/">Creole Club (Organizasyon Langaj é Lakilchi Kréyol Lalwizyàn)</a>, 2025-present, <a href="https://lsureveille.com/265157/entertainment/lsu-creole-club/">featured in Reveille</a></li>
+									</ul>
+
+									<h4>Awards</h4>
+									<ul>
+										<li>Honors TOPS Scholarship, Every Semester</li>
+										<li>President’s Student Aid, Every Semester</li>
+										<li><a href="https://www.lsu.edu/our/funding/gulf_scholars_program.php"> Gulf Scholars Program, Summer 2024</a></li>
+									</ul>
+
+									<h4>Other Projects and Events That I've Done</h4>
+									<ul>
+										<li>Presentation at Jill Brody’s Linguistic Meetup Day, hosted by <a href="https://tigerlink.lsu.edu/sla/home/">SLA</a>, Spring 2023</li>
+										<li>Hackathon, hosted by <a href="https://www.saselsu.org/#/about">SASE</a>, Spring 2024</li>
+										<li>Semester-long website project in CSC 3380 Object-Oriented Design, Spring 2025</li>
+										<li>Hackathon, hosted by <a href="https://www.wicslsu.com/">WICS</a> and <a href="https://www.saselsu.org/#/about">SASE</a>, Fall 2025</li>
+									</ul>
+								</div>
+							</section>
+						
+						<!-- Current Work -->
+							<section id="currentwork">
+								<div class="container">
+									<h3>Current Projects</h3>
+									<p>Where applicable, there are links to the associated GitHub repository.</p>
+									<ul class="feature-icons">
+										<li class="icon solid fa-code"><a href="https://github.com/WilliamMorales1/IntensifierResearch">Code to Analyze Intensifiers</a></li>
+										<li class="icon solid fa-cubes"><a href="https://github.com/claytakiler/Heritage-Project">An App for Language Preservation</li>
+										<li class="icon solid fa-book"><a href="https://github.com/WilliamMorales1/louisiana-creole-online-dictionary">An Online Dictionary of Louisiana Creole</a></li>
+										<li class="icon solid fa-users">Running the Linguistics Club</li>
+										<li class="icon solid fa-bolt">An Honors Thesis/Capstone</li>
+										<li class="icon solid fa-coffee">Publishing a Paper on English Dialects</li>
+									</ul>
+								</div>
+							</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/dark-mode-switcher.js"></script>
+
+	</body>
 </html>
