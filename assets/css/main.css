@@ -2665,7 +2665,6 @@ input, select, textarea {
 
 		.features article .image {
 			display: inline-block;
-			padding-right: 2.5em;
 			vertical-align: middle;
 			width: 48%;
 		}
@@ -2677,6 +2676,7 @@ input, select, textarea {
 
 		.features article .inner {
 			display: inline-block;
+			padding-left: 2.5em;
 			vertical-align: middle;
 			width: 50%;
 		}
@@ -3370,6 +3370,11 @@ input, select, textarea {
 .dark-mode #main > section {
     background-color: #333; 
     color: #f5f5f5; 
+	border-color: #444;
+}
+
+.dark-mode article {
+	border-color: #444;
 }
 
 .dark-mode body, 
@@ -3393,6 +3398,7 @@ input, select, textarea {
 }
 
 .dark-mode #header #nav ul li a.active {
+	background: #333;
     color: #f5f5f5; 
 }
 
@@ -3457,4 +3463,17 @@ input, select, textarea {
 /* --- Specific Image Inversion Fix --- */
 .dark-mode #languages-map-image {
     filter: invert(1) hue-rotate(180deg); 
+}
+
+.dark-mode p.blurb {
+	opacity: 0.5;
+}
+
+.dark-mode a.icon {
+    border: none;
+}
+
+/* Target the Anchor Tag with the class 'image' in dark mode */
+.dark-mode a.image {
+    border: none;
 }
