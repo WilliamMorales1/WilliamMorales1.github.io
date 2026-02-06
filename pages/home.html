@@ -1,0 +1,360 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home - William Morales</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<style>
+			.map-container {
+				position: relative;
+				width: 100%;
+				height: 300px;
+				margin: 80px 0;
+				margin-top: 170px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+			
+			#world-map {
+				width: 100%;
+				height: 100%;
+			}
+
+			.legend {
+				position: absolute;
+				left: 20px;
+				top: 50%;
+				transform: translateY(-50%);
+				background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+				padding: 15px;
+				border-radius: 8px;
+				backdrop-filter: blur(5px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				z-index: 10;
+			}
+
+			.legend-item {
+				display: flex;
+				align-items: center;
+				margin-bottom: 8px;
+				font-size: 0.9em;
+			}
+
+			.color-box {
+				width: 15px;
+				height: 15px;
+				margin-right: 10px;
+				border-radius: 2px;
+				border: 1px solid rgba(255,255,255,0.3);
+			}
+			
+			.tooltip {
+				position: absolute;
+				background: rgba(0, 0, 0, 0.8);
+				color: #fff;
+				padding: 8px 12px;
+				border-radius: 4px;
+				font-size: 14px;
+				pointer-events: none;
+				z-index: 1000;
+				min-width: 120px;
+				text-align: center;
+				opacity: 0;
+				transition: opacity 0.3s;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<button id="dark-mode-toggle" title="Toggle Dark Mode">
+					<span class="icon solid fa-moon"></span>
+				</button>
+
+				<header>
+					<span class="image avatar"><img src="../images/avatar.png" alt="" /></span>
+					<h1 id="logo">William Morales</h1>
+					<p class="blurb">Interested in all things<br> Linguistics and Data Science</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="../pages/home.html" class="active">Home</a></li>
+						<li><a href="../pages/education.html">Education</a></li>
+						<li><a href="../pages/profdev.html">Professional Development</a></li>
+						<li><a href="../pages/currentwork.html">Current Work</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://github.com/WilliamMorales1" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:wsmbuis5224@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.instagram.com/hydragon123/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<!-- About Me -->
+							<section id="aboutme">
+								<div class="map-container">
+									<div id="world-map"></div>
+									<div id="legend" class="legend"></div> <div id="world-map"></div>
+									<div id="tooltip" class="tooltip"></div>
+								</div>
+								
+								<div class="container">
+									<header class="major">
+										<h2 style="font-size: 2.7em;">Click on a country to hear a language!</h2>
+										<p>I'm a Computer Science undergraduate student at Louisiana State University, and I'm always looking forward for any new projects and research.</p>
+									</header>
+									<p>Since a young age, I've always been very interested in learning other languages, which lead me to start learning about what things like Syntax Trees and Logographies are way before starting formal linguistics classes. I also had an early interest in "codes," both machine code but also simple methods of encryption, which lead me to start learning Python before I had even decided on my major. These interests have really transformed my life, making me able to have the opportunities to do some fun research, meet some really cool people, and continuously learn more and more things along the way. <b>I like to do a lot of things, as long as I think it will be interesting to me. So, if you need to contact me about anything, you can message me at <a href="mailto:wsmbuis5224@gmail.com">wsmbuis5224@gmail.com</a>.</b></p>
+
+									<h4>Languages:</h4>
+									<ul> 
+										<li>English - Native</li>
+										<li>Spanish - Proficient</li>
+										<li>French - Intermediate</li>
+										<li>Japanese - Intermediate</li>
+										<li>Mandarin Chinese - Intermediate</li>
+									</ul>
+								</div>
+							</section>
+                    </div>
+            </div>
+				
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/dark-mode-switcher.js"></script>
+			
+			<!-- D3.js for interactive globe -->
+			<script src="https://d3js.org/d3.v5.min.js"></script>
+			<script src="https://d3js.org/topojson.v1.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-geo-projection/2.9.0/d3-geo-projection.min.js"></script>
+			
+			<script>
+				// Wait for DOM to load
+				document.addEventListener('DOMContentLoaded', function() {
+					// Initialize the globe
+					initGlobe();
+				});
+
+				function initGlobe() {
+					// Set dimensions and margins for the globe
+					const width = Math.min(document.querySelector(".map-container").offsetWidth, 800);
+					const height = Math.min(document.querySelector(".map-container").offsetHeight, 500);
+					
+					// Remove any existing SVG
+					d3.select("#world-map").select("svg").remove();
+					
+					// Create SVG container
+					const svg = d3.select("#world-map")
+						.append("svg")
+						.attr("width", width)
+						.attr("height", height)
+						.style("overflow", "visible"); // Allows elements to peek out if needed
+					
+					// Create a globe projection
+					const projection = d3.geoOrthographic()
+						.scale(300)
+						.translate([width * 0.75, height / 2])
+						.rotate([0, 0])
+						.clipAngle(90);
+					
+					const path = d3.geoPath().projection(projection);
+					
+					// Get tooltip element
+					const tooltip = document.getElementById("tooltip");
+					
+					// Add water
+					svg.append("path")
+						.datum({type: "Sphere"})
+						.attr("class", "water")
+						.attr("d", path)
+						.style("fill", "#242f3e")
+						.style("stroke", "#38414e")
+						.style("stroke-width", "1px");
+					
+					// Graticule for the globe
+					const graticule = d3.geoGraticule();
+					
+					svg.append("path")
+						.datum(graticule)
+						.attr("class", "graticule")
+						.attr("d", path)
+						.style("fill", "none")
+						.style("stroke", "#38414e")
+						.style("stroke-width", "0.5px");
+					
+					Promise.all([
+						d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"),
+						d3.json("country-languages.json") 
+					]).then(function(data) {
+						const world = data[0];
+						const db = data[1]; 
+
+						// 1. Extract all family names and limit to 10
+						// We use Object.values because db.families is an object
+						const allFamilyNames = Object.values(db.families);
+						const limit = 10;
+						const topFamilies = allFamilyNames.slice(0, limit);
+						const hasMore = allFamilyNames.length > limit;
+
+						// 2. Create the color domain (Top 10 + "Other" if needed)
+						const colorDomain = hasMore ? [...topFamilies, "Other"] : topFamilies;
+
+						// 3. Define the scale
+						const colorScale = d3.scaleOrdinal()
+							.domain(colorDomain)
+							.range(d3.schemeTableau10.concat(hasMore ? ["#7f7f7f"] : []));
+
+						// 4. Update the Legend
+						const legendContainer = d3.select("#legend");
+						legendContainer.html("<strong>Language Families</strong><br><br>");
+
+						colorDomain.forEach((family) => {
+							const item = legendContainer.append("div").attr("class", "legend-item");
+							item.append("div")
+								.attr("class", "color-box")
+								.style("background-color", colorScale(family));
+							item.append("span").text(family);
+						});
+
+						// 5. Define getCountryColor BEFORE it is called by countryPaths
+						const getCountryColor = (d) => {
+							const countryName = d.properties.name;
+							const countryInfo = db.countries[countryName];
+							
+							if (countryInfo && countryInfo.families && countryInfo.families.length > 0) {
+								const primaryFamily = countryInfo.families[0];
+								// Check if the family is in our top 10 list
+								if (topFamilies.includes(primaryFamily)) {
+									return colorScale(primaryFamily);
+								} else {
+									return colorScale("Other");
+								}
+							}
+							return "#444"; // Default for unmapped countries
+						};
+
+						// --- Drawing & Rotation Logic ---
+						let currentAudio = null;
+						let isPaused = false;
+						let rotationValue = [0, 0]; 
+						const speedFactor = 0.05; 
+
+						const countries = topojson.feature(world, world.objects.countries).features;
+						const countryPaths = svg.selectAll("path.country")
+							.data(countries)
+							.enter()
+							.append("path")
+							.attr("class", "country")
+							.attr("d", path)
+							.attr("stroke", "#fff")
+							.attr("stroke-width", 0.5)
+							.attr("cursor", "pointer")
+							.attr("fill", getCountryColor)
+							.on("mouseover", function(d) {
+								isPaused = true;
+								const countryName = d.properties.name;
+								const countryInfo = db.countries[countryName];
+								let tooltipContent = `<strong>${countryName}</strong>`;
+								if (countryInfo && countryInfo.families) {
+									tooltipContent += `<br>Families: ${countryInfo.families.join(", ")}`;
+									tooltipContent += `<br>Languages: ${countryInfo.langs.join(", ")}`;
+								}
+								tooltip.innerHTML = tooltipContent;
+								tooltip.style.opacity = "1";
+								d3.select(this).attr("fill", () => d3.color(getCountryColor(d)).darker(0.7));
+							})
+							.on("mousemove", function() {
+								tooltip.style.left = (d3.event.pageX + 17) + "px";
+								tooltip.style.top = (d3.event.pageY - 130) + "px";
+							})
+							.on("mouseout", function(d) {
+								isPaused = false;
+								tooltip.style.opacity = "0";
+								d3.select(this).attr("fill", getCountryColor(d));
+							})
+							.on("click", function(d) {
+								const countryInfo = db.countries[d.properties.name];
+								if (countryInfo && countryInfo.langs.length > 0) {
+									const primaryLang = countryInfo.langs[0];
+									const audioFile = db.languages_metadata[primaryLang]?.audio;
+									if (audioFile) {
+										if (currentAudio) currentAudio.pause();
+										currentAudio = new Audio(`./audios/${audioFile}`);
+										currentAudio.play();
+									}
+								}
+							});
+
+						function renderAll() {
+							countryPaths.attr("d", path);
+							svg.select(".water").attr("d", path);
+							svg.select(".graticule").attr("d", path);
+						}
+
+						// Drag behavior
+						const drag = d3.drag()
+							.on("start", () => { isPaused = true; })
+							.on("drag", () => {
+								const rotate = projection.rotate();
+								const k = 75 / projection.scale(); 
+								projection.rotate([rotate[0] + d3.event.dx * k, rotate[1] - d3.event.dy * k]);
+								rotationValue = projection.rotate();
+								renderAll();
+							})
+							.on("end", () => { isPaused = false; });
+
+						svg.call(drag);
+
+						// Rotation Timer
+						d3.timer(function() {
+							if (!isPaused) {
+								rotationValue[0] += speedFactor; 
+								projection.rotate(rotationValue);
+								renderAll();
+							}
+						});
+
+					}).catch(error => console.error("Error loading data:", error));
+				}
+			</script>
+			<script>
+				document.querySelectorAll('a').forEach(link => {
+					// Check if the link is NOT inside the header section
+					if (!link.closest('#header')) {
+					// Also ensure it's an actual external link (not a mailto or internal fragment)
+					if (link.hostname && link.hostname !== location.hostname) {
+						link.setAttribute('target', '_blank');
+						link.setAttribute('rel', 'noopener noreferrer');
+					}
+					}
+				});
+			</script>
+	</body>
+</html>
