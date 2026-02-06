@@ -123,7 +123,6 @@
 										<li>Spanish - Proficient</li>
 										<li>French - Intermediate</li>
 										<li>Japanese - Intermediate</li>
-										<li>Mandarin Chinese - Intermediate</li>
 									</ul>
 								</div>
 							</section>
@@ -257,7 +256,7 @@
 									return colorScale("Other");
 								}
 							}
-							return "#444"; // Default for unmapped countries
+							return "#fff"; // Default for unmapped countries (Antarctica)
 						};
 
 						// --- Drawing & Rotation Logic ---
@@ -320,7 +319,11 @@
 
 						// Drag behavior
 						const drag = d3.drag()
-							.on("start", () => { isPaused = true; })
+							.on("start", () => { 
+								isPaused = true; 
+								// Set the cursor to 'grabbing' on the entire SVG when the drag starts
+								d3.select("#world-map svg").style("cursor", "grabbing"); 
+							})
 							.on("drag", () => {
 								const rotate = projection.rotate();
 								const k = 75 / projection.scale(); 
@@ -328,8 +331,12 @@
 								rotationValue = projection.rotate();
 								renderAll();
 							})
-							.on("end", () => { isPaused = false; });
-
+							.on("end", () => { 
+								isPaused = false; 
+								// Reset the cursor back to 'default' (or 'grab') when the drag ends
+								d3.select("#world-map svg").style("cursor", "default"); 
+							});
+						
 						svg.call(drag);
 
 						// Rotation Timer
@@ -347,12 +354,12 @@
 			<script>
 				document.querySelectorAll('a').forEach(link => {
 					// Check if the link is NOT inside the header section
-					if (!link.closest('#header')) {
-					// Also ensure it's an actual external link (not a mailto or internal fragment)
-					if (link.hostname && link.hostname !== location.hostname) {
-						link.setAttribute('target', '_blank');
-						link.setAttribute('rel', 'noopener noreferrer');
-					}
+					if (!link.closest('#header' || link.closest('#header#footer'))) {
+						// Also ensure it's an actual external link (not a mailto or internal fragment)
+						if (link.hostname && link.hostname !== location.hostname) {
+							link.setAttribute('target', '_blank');
+							link.setAttribute('rel', 'noopener noreferrer');
+						}
 					}
 				});
 			</script>
