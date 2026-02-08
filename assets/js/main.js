@@ -66,59 +66,52 @@
 					var $this = $(this);
 
 					// External link? Bail.
-						if ($this.attr('href').charAt(0) != '#')
-							return;
+					if ($this.attr('href').charAt(0) != '#')
+						return;
 
 					// Deactivate all links.
-						$nav_a.removeClass('active');
+					$nav_a.removeClass('active');
 
-					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-						$this
-							.addClass('active')
-							.addClass('active-locked');
+					// Activate link *and* lock it.
+					$this
+						.addClass('active')
+						.addClass('active-locked');
 
 				})
 				.each(function() {
 
-					var	$this = $(this),
-						id = $this.attr('href'),
-						$section = $(id);
+					var $this = $(this),
+						id = $this.attr('href');
+
+					// FIX: If the link doesn't start with '#', it's a file path. Bail.
+					if (id.charAt(0) != '#')
+						return;
+
+					var $section = $(id);
 
 					// No section for this link? Bail.
-						if ($section.length < 1)
-							return;
+					if ($section.length < 1)
+						return;
 
-					// Scrollex.
-						$section.scrollex({
-							mode: 'middle',
-							top: '5vh',
-							bottom: '5vh',
-							initialize: function() {
+					// Scrollex logic...
+					$section.scrollex({
+						mode: 'middle',
+						top: '5vh',
+						bottom: '5vh',
+						initialize: function() {
+							$section.addClass('inactive');
+						},
+						enter: function() {
+							$section.removeClass('inactive');
 
-								// Deactivate section.
-									$section.addClass('inactive');
-
-							},
-							enter: function() {
-
-								// Activate section.
-									$section.removeClass('inactive');
-
-								// No locked links? Deactivate all links and activate this section's one.
-									if ($nav_a.filter('.active-locked').length == 0) {
-
-										$nav_a.removeClass('active');
-										$this.addClass('active');
-
-									}
-
-								// Otherwise, if this section's link is the one that's locked, unlock it.
-									else if ($this.hasClass('active-locked'))
-										$this.removeClass('active-locked');
-
+							if ($nav_a.filter('.active-locked').length == 0) {
+								$nav_a.removeClass('active');
+								$this.addClass('active');
 							}
-						});
-
+							else if ($this.hasClass('active-locked'))
+								$this.removeClass('active-locked');
+						}
+					});
 				});
 
 		// Title Bar.

@@ -77,17 +77,6 @@
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
 			<script src="../assets/js/dark-mode-switcher.js"></script>
-			<script>
-				document.querySelectorAll('a').forEach(link => {
-					// Check if the link is NOT inside the header section
-					if (!link.closest('#header')) {
-					// Also ensure it's an actual external link (not a mailto or internal fragment)
-					if (link.hostname && link.hostname !== location.hostname) {
-						link.setAttribute('target', '_blank');
-						link.setAttribute('rel', 'noopener noreferrer');
-					}
-					}
-				});
-			</script>
+			<script src="../assets/js/new-tab-link.js"></script>
 	</body>
 </html>
