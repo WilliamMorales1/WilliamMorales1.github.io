@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fff;
+		background: #ffffff;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1709,7 +1709,7 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 4.5em);
-		width: 45em;
+		width: 62em;
 	}
 
 		.container.xsmall {
@@ -2786,6 +2786,7 @@ input, select, textarea {
 				list-style: none;
 				margin: 0;
 				padding: 0;
+				font-weight: bold;
 			}
 
 				#header > nav ul li {
@@ -3476,3 +3477,15 @@ input, select, textarea {
 .dark-mode a.image {
     border: none;
 }
+
+/* Hide all Google Translate UI */
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip-content,
+.goog-text-highlight,
+#google_translate_element,
+.goog-te-gadget,
+.goog-te-menu-frame { display: none !important; }
+body { top: 0px !important; }
