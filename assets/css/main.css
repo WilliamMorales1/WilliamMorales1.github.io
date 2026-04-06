@@ -3477,3 +3477,15 @@ input, select, textarea {
 .dark-mode a.image {
     border: none;
 }
+
+/* Hide all Google Translate UI */
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip-content,
+.goog-text-highlight,
+#google_translate_element,
+.goog-te-gadget,
+.goog-te-menu-frame { display: none !important; }
+body { top: 0px !important; }

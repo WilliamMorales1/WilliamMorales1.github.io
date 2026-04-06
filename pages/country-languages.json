@@ -89,8 +89,8 @@
     "Czechia": { "langs": ["Czech"], "families": ["Indo-European"] },
     "Tajikistan": { "langs": ["Tajik"], "families": ["Indo-European"] },
     "Fr. S. Antarctic Lands": { "langs": ["French"], "families": ["Indo-European"] },
-    "Taiwan": { "langs": ["Chinese"], "families": ["Sino-Tibetan"] },
-    "China": { "langs": ["Chinese"], "families": ["Sino-Tibetan"] },
+    "Taiwan": { "langs": ["Chinese (traditional)"], "families": ["Sino-Tibetan"] },
+    "China": { "langs": ["Chinese (simplified)"], "families": ["Sino-Tibetan"] },
     "Japan": { "langs": ["Japanese"], "families": ["Japonic"] },
     "India": { "langs": ["Hindi", "English", "Bengali", "Marathi", "Gujarati"], "families": ["Indo-European"] },
     "Brazil": { "langs": ["Portuguese"], "families": ["Indo-European"] },
@@ -244,6 +244,6 @@
     "Bahamas": { "langs": ["English"], "families": ["Indo-European"] },
     "Puerto Rico": { "langs": ["Spanish", "English"], "families": ["Indo-European"] },
     "Haiti": { "langs": ["Haitian Creole"], "families": ["Creole"] },
-    "Greenland": { "langs": ["Greenlandic"], "families": ["Eskaleut"] }
+    "Greenland": { "langs": ["Kalaallisut"], "families": ["Eskaleut"] }
   }
 }

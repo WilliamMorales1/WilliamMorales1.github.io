@@ -1,9 +1,64 @@
 // Global variables
 let projection, context, canvas, worldData, dbData, render;
 let isPaused = false;
+let userPaused = false;
 let hoveredCountry = null;
 let rotationValue = [0, 0]; // [longitude, latitude]
 const speedFactor = 0.15;   // Increased speed for visibility
+let dragMoved = false;
+
+const languageCodes = {
+    'English': 'en', 'Spanish': 'es', 'Chinese': 'zh-CN', 'Kalaallisut': 'kl',
+    'Chinese (simplified)': 'zh-CN', 'Chinese (traditional)': 'zh-TW', 'Japanese': 'ja',
+    'Hindi': 'hi', 'Portuguese': 'pt', 'Arabic': 'ar', 'Russian': 'ru',
+    'Turkish': 'tr', 'French': 'fr', 'German': 'de', 'Korean': 'ko',
+    'Vietnamese': 'vi', 'Finnish': 'fi', 'Italian': 'it', 'Bengali': 'bn',
+    'Telugu': 'te', 'Urdu': 'ur', 'Swahili': 'sw', 'Amharic': 'am',
+    'Thai': 'th', 'Tagalog': 'tl', 'Indonesian': 'id', 'Persian': 'fa',
+    'Polish': 'pl', 'Malay': 'ms', 'Burmese': 'my', 'Ukrainian': 'uk',
+    'Malayalam': 'ml', 'Khmer': 'km', 'Lao': 'lo', 'Czech': 'cs',
+    'Hungarian': 'hu', 'Azerbaijani': 'az', 'Uzbek': 'uz', 'Romanian': 'ro',
+    'Dutch': 'nl', 'Kazakh': 'kk', 'Greek': 'el', 'Serbo-Croatian': 'sr',
+    'Bulgarian': 'bg', 'Hebrew': 'iw', 'Danish': 'da', 'Swedish': 'sv',
+    'Norwegian': 'no', 'Mongolian': 'mn', 'Icelandic': 'is', 'Tajik': 'tg',
+    'Javanese': 'jw', 'Marathi': 'mr', 'Gujarati': 'gu', 'Quechua': 'qu',
+    'Punjabi': 'pa', 'Yoruba': 'yo', 'Igbo': 'ig', 'Hausa': 'ha',
+    'Afrikaans': 'af', 'Zulu': 'zu', 'Xhosa': 'xh', 'Sotho': 'st',
+    'Chewa': 'ny', 'Tswana': 'tn', 'Basque': 'eu', 'Kinyarwanda': 'rw',
+    'Turkmen': 'tk', 'Kyrgyz': 'ky', 'Malagasy': 'mg', 'Kongo': 'kg',
+    'Lingala': 'ln', 'Sango': 'sg', 'Fijian': 'fj', 'Georgian': 'ka',
+    'Armenian': 'hy', 'Albanian': 'sq', 'Catalan': 'ca', 'Croatian': 'hr',
+    'Slovak': 'sk', 'Slovenian': 'sl', 'Lithuanian': 'lt', 'Latvian': 'lv',
+    'Estonian': 'et', 'Macedonian': 'mk', 'Belarusian': 'be', 'Galician': 'gl',
+    'Serbian': 'sr', 'Nepali': 'ne', 'Sinhala': 'si', 'Pashto': 'ps',
+    'Kurdish': 'ku', 'Somali': 'so', 'Tigrinya': 'ti', 'Yoruba': 'yo',
+};
+
+function isTranslated() {
+    return document.cookie.split(';').some(c => c.trim().startsWith('googtrans='));
+}
+
+function translatePageTo(langCode) {
+    if (!langCode || langCode === 'en') {
+        if (!isTranslated()) return; // already English, do nothing
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
+        location.reload();
+        return;
+    }
+    document.cookie = `googtrans=/en/${langCode}; path=/`;
+    document.cookie = `googtrans=/en/${langCode}; path=/; domain=${location.hostname}`;
+    location.reload();
+}
+
+function getLangCode(langName) {
+    if (!langName) return null;
+    // Try exact match
+    if (languageCodes[langName]) return languageCodes[langName];
+    // Try first word (e.g. "Guyanese Creole, English" → "Guyanese Creole")
+    const firstPart = langName.split(',')[0].trim();
+    return languageCodes[firstPart] || null;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     initGlobe();
@@ -76,9 +131,12 @@ function initGlobe() {
         // --- Legend & Color Logic ---
         const allFamilyNames = Object.values(dbData.families || {});
         const topFamilies = allFamilyNames.slice(0, 10);
+        const customScheme = d3.schemeTableau10.map(c =>
+            c === "#76b7b2" ? "#4acaa8" : c  // swap whichever color you want replaced
+        );
         const colorScale = d3.scaleOrdinal()
             .domain([...topFamilies, "Other"])
-            .range(d3.schemeTableau10.concat(["#7f7f7f"]));
+            .range(customScheme.concat(["#7f7f7f"]));
 
         const getCountryColor = (d) => {
             const countryInfo = dbData.countries[d.properties.name];
@@ -142,22 +200,25 @@ function initGlobe() {
         // --- Drag functionality ---
         const drag = d3.drag()
             .on("start", (event) => {
-                const rect = canvas.getBoundingClientRect();
-                const x = event.x; // d3.drag provides relative x
-                const y = event.y; // d3.drag provides relative y
+                dragMoved = false;
 
+                const x = event.x;
+                const y = event.y;
                 const inverted = projection.invert([x, y]);
                 const isOverCountry = inverted && countries.find(c => d3.geoContains(c, inverted));
 
                 if (isOverCountry) {
-                    canvas.style.cursor = "pointer"; // "Clicked" version for countries
+                    canvas.style.cursor = "pointer";
                 } else {
-                    canvas.style.cursor = "grabbing"; // Or "grabbing" if you want drag feedback everywhere
+                    canvas.style.cursor = "grabbing";
                 }
-                
+
                 isPaused = true;
             })
             .on("drag", (event) => {
+                if (Math.abs(event.dx) > 1 || Math.abs(event.dy) > 1) {
+                    dragMoved = true;
+                }
                 const rotate = projection.rotate();
                 const k = 75 / projection.scale();
                 projection.rotate([
@@ -168,16 +229,27 @@ function initGlobe() {
                 render();
             })
             .on("end", (event) => {
-                isPaused = false;
-                
-                // Return to the appropriate hover state
-                const rect = canvas.getBoundingClientRect();
+                if (!userPaused) isPaused = false;
+
                 const x = event.x;
                 const y = event.y;
                 const inverted = projection.invert([x, y]);
-                const isOverCountry = inverted && countries.find(c => d3.geoContains(c, inverted));
+                const clickedCountry = inverted && countries.find(c => d3.geoContains(c, inverted));
 
-                canvas.style.cursor = isOverCountry ? "pointer" : "grab";
+                // If this was a click (not a drag), translate the page
+                if (!dragMoved && clickedCountry) {
+                    const countryName = clickedCountry.properties.name;
+                    const countryInfo = dbData.countries[countryName];
+                    if (countryInfo && countryInfo.langs && countryInfo.langs.length > 0) {
+                        const firstLang = countryInfo.langs[0];
+                        const langCode = getLangCode(firstLang);
+                        if (langCode) {
+                            translatePageTo(langCode);
+                        }
+                    }
+                }
+
+                canvas.style.cursor = clickedCountry ? "pointer" : "grab";
             });
 
         d3.select(canvas).call(drag).style("cursor", "grab");
@@ -198,7 +270,7 @@ function initGlobe() {
             // 1. Check if mouse is outside the globe's radius
             if (distance > radius) {
                 canvas.style.cursor = "default"; // Return to normal pointer
-                isPaused = false;
+                if (!userPaused) isPaused = false;
                 hoveredCountry = null;
                 tooltip.style("opacity", 0);
                 render();
@@ -233,9 +305,9 @@ function initGlobe() {
                     .style("top", (event.pageY - 40) + "px")
                     .html(tooltipContent);
             } else {
-                isPaused = false;
+                if (!userPaused) isPaused = false;
                 hoveredCountry = null;
-                
+
                 // Revert to grab icon when over ocean/water
                 canvas.style.cursor = "grab"; 
 
@@ -252,6 +324,17 @@ function initGlobe() {
                 render();
             }
         });
+
+        // --- Pause button ---
+        const pauseBtn = document.getElementById("globe-pause-btn");
+        if (pauseBtn) {
+            pauseBtn.addEventListener("click", () => {
+                userPaused = !userPaused;
+                isPaused = userPaused;
+                pauseBtn.textContent = userPaused ? "▶" : "⏸";
+                pauseBtn.title = userPaused ? "Resume" : "Pause";
+            });
+        }
 
         let resizeTimeout;
         window.addEventListener('resize', () => {
