@@ -20,7 +20,7 @@
 						<li><a href="../pages/home.html">Home</a></li>
 						<li><a href="../pages/education.html">Education</a></li>
 						<li><a href="../pages/profdev.html">Professional Development</a></li>
-						<li><a href="../pages/currentwork.html" class="active">Current Work</a></li>
+						<li><a href="../pages/currentwork.html" class="active">Personal Projects</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -39,16 +39,72 @@
 						<!-- Current Work -->
 							<section id="currentwork">
 								<div class="container">
-									<h3>Current Projects</h3>
-									<p>Where applicable, there are links to the associated GitHub repository.</p>
-									<ul class="feature-icons">
-										<li class="icon solid fa-code"><a href="https://github.com/WilliamMorales1/IntensifierResearch" target="_blank" rel="noopener noreferrer">Code to Analyze Intensifiers</a></li>
-										<li class="icon solid fa-cubes"><a href="https://github.com/claytakiler/Heritage-Project" target="_blank" rel="noopener noreferrer">An App for Language Preservation</li>
-										<li class="icon solid fa-book"><a href="https://github.com/WilliamMorales1/louisiana-creole-online-dictionary" target="_blank" rel="noopener noreferrer">An Online Dictionary of Louisiana Creole</a></li>
-										<li class="icon solid fa-users">Running the Linguistics Club</li>
-										<li class="icon solid fa-bolt">An Honors Thesis/Capstone</li>
-										<li class="icon solid fa-coffee">Publishing a Paper on English Dialects</li>
-									</ul>
+									<h3>Personal Projects</h3>
+									<p>A collection of software, research, and linguistics projects I've worked on. Where applicable, links to the associated GitHub repository are included.</p>
+
+									<h4>Linguistics &amp; NLP</h4>
+
+									<h5><a href="https://github.com/WilliamMorales1/IntensifierResearch" target="_blank" rel="noopener noreferrer">Code to Analyze Intensifiers</a></h5>
+									<p>
+										A custom Python algorithm developed to collect and analyze intensifier data from transcripts of Spanish dialects. Used to support ongoing sociolinguistic research comparing intensification patterns across different Spanish-speaking communities. Has been used in multiple conference presentations and is part of a paper currently in preparation for publication.<br>
+										<em>Tools: Python, corpus linguistics methods</em>
+									</p>
+
+									<h5><a href="https://github.com/WilliamMorales1/louisiana-creole-online-dictionary" target="_blank" rel="noopener noreferrer">An Online Dictionary of Louisiana Creole</a></h5>
+									<p>
+										A web-based dictionary for Louisiana Creole, a critically endangered language. The goal is to make lexical resources accessible online to support language documentation and revitalization efforts. Built in collaboration with members of the LSU Creole Club.<br>
+										<em>Tools: Django, Valdman Dictionary of Louisiana Creole</em>
+									</p>
+
+									<h5>An Honors Thesis / Capstone</h5>
+									<p>
+										Right now we are thinking about creating a IPA-based, language-agnostic TTS model that could be used to make TTS for langauges when there are fewer amounts of acoustic data to make a dedicated TTS model for.<br>
+										<em>Mentor: Dr. Keith Mills &mdash; Expected: Fall 2026&ndash;Spring 2026</em>
+									</p>
+
+									<h5>Publishing a Paper on English Dialects</h5>
+									<p>
+										Working toward publication of research examining how dialectal variation affects the perception of English sounds, specifically interdental fricatives and lateral liquids. Involves acoustic analysis in Praat and Qualtrics-based perceptual surveys.<br>
+										<em>Collaborators: Dr. Hunju Chung &amp; Dr. Irina Shport</em>
+									</p>
+
+									<h5><a href="https://github.com/WilliamMorales1/SpanishFutureResearch" target="_blank" rel="noopener noreferrer">Spanish Future Tense Research</a></h5>
+									<p>
+										A Python-based project for analyzing expressions of the future tense in Spanish corpora. Includes scripts for data cleaning, grammatical tagging, and building structured dataframes from raw corpus data to support quantitative sociolinguistic analysis.<br>
+										<em>Tools: Python, pandas</em>
+									</p>
+
+									<h5><a href="https://github.com/WilliamMorales1/PraatDataAnalysis" target="_blank" rel="noopener noreferrer">Praat Data Analysis Scripts</a></h5>
+									<p>
+										A collection of Praat scripts used for collecting and analyzing audio data in a study on dialectal variation and perception of English sounds. Handles batch WAV file processing and automates acoustic measurements that would otherwise need to be done manually.<br>
+										<em>Tools: Praat scripting language</em>
+									</p>
+
+									<h4>Software &amp; App Development</h4>
+
+									<h5><a href="https://github.com/claytakiler/Heritage-Project" target="_blank" rel="noopener noreferrer">An App for Language Preservation</a></h5>
+									<p>
+										A collaborative application designed to help heritage language learners and endangered language communities document and learn their languages. Developed with a small team with a focus on accessibility and usability for non-technical users.<br>
+										<em>Tools: [Placeholder — add tech stack here]</em>
+									</p>
+
+									<h5><a href="https://github.com/g34rmeister/2r-in-strawberry" target="_blank" rel="noopener noreferrer">Hackathon Project — 2r in Strawberry</a></h5>
+									<p>
+										A project built during the WICS &amp; SASE Hackathon, Fall 2025. [Placeholder — add a sentence or two describing what the project does and what problem it solves.]<br>
+										<em>Tools: Django &amp; React</em>
+									</p>
+
+									<h5><a href="https://github.com/WilliamMorales1/Multilingual-Wordle" target="_blank" rel="noopener noreferrer">Multilingual Wordle</a></h5>
+									<p>
+										A command-line implementation of Wordle that supports any language with entries on Wiktionary — not just English. Word length and number of guesses are configurable, and word lists are pulled dynamically from Wiktionary rather than hardcoded, making it easy to play in dozens of languages.<br>
+										<em>Tools: Python</em>
+									</p>
+
+									<h5><a href="https://github.com/WilliamMorales1/Swadesh-Word-A-Day" target="_blank" rel="noopener noreferrer">Swadesh Word-A-Day</a></h5>
+									<p>
+										A Python tool that scrapes Wiktionary's Swadesh list appendices across 200+ languages to build a vocabulary dataset, then sends a daily word-of-the-day push notification via ntfy.sh. Supports filtering to the 30 most-spoken languages and is designed to run on a cron schedule.<br>
+										<em>Tools: Python, BeautifulSoup4, ntfy.sh</em>
+									</p>
 								</div>
 							</section>
                     </div>
