@@ -65,7 +65,7 @@
     "Norwegian": { "audio": "norwegian.mp3" }
   },
   "countries": {
-    "United States of America": { "langs": ["English"], "families": ["Indo-European"] },
+    "United States of America": { "langs": ["English", "Spanish"], "families": ["Indo-European"] },
     "Mongolia": { "langs": ["Mongolian"], "families": ["Mongolic"] },
     "United Kingdom": { "langs": ["English"], "families": ["Indo-European"] },
     "Guyana": { "langs": ["Guyanese Creole, English"], "families": ["Creole", "Indo-European"] },
