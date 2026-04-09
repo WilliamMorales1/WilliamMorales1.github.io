@@ -331,7 +331,8 @@ function initGlobe() {
             pauseBtn.addEventListener("click", () => {
                 userPaused = !userPaused;
                 isPaused = userPaused;
-                pauseBtn.textContent = userPaused ? "▶" : "⏸";
+                document.getElementById("globe-pause-icon").style.display = userPaused ? "none" : "";
+                document.getElementById("globe-play-icon").style.display = userPaused ? "" : "none";
                 pauseBtn.title = userPaused ? "Resume" : "Pause";
             });
         }
