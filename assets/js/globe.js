@@ -152,11 +152,27 @@ function initGlobe() {
         // Populate Legend
         const legendContainer = d3.select("#legend");
         if (!legendContainer.empty()) {
-            legendContainer.html("<strong>Language Families</strong><br><br>");
+            legendContainer.html("");
+
+            const header = legendContainer.append("div").attr("class", "legend-header");
+            header.append("strong").text("Language Families");
+            const toggleBtn = header.append("button")
+                .attr("class", "legend-toggle")
+                .attr("title", "Minimize")
+                .text("−");
+
+            const body = legendContainer.append("div").attr("class", "legend-body");
             colorScale.domain().forEach(family => {
-                const item = legendContainer.append("div").attr("class", "legend-item");
+                const item = body.append("div").attr("class", "legend-item");
                 item.append("div").attr("class", "color-box").style("background-color", colorScale(family));
                 item.append("span").text(family);
+            });
+
+            toggleBtn.on("click", () => {
+                const isCollapsed = legendContainer.classed("collapsed");
+                legendContainer.classed("collapsed", !isCollapsed);
+                toggleBtn.text(isCollapsed ? "−" : "+");
+                toggleBtn.attr("title", isCollapsed ? "Minimize" : "Expand");
             });
         }
 
