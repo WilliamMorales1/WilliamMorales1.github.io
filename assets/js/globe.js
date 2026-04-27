@@ -31,7 +31,8 @@ const languageCodes = {
     'Slovak': 'sk', 'Slovenian': 'sl', 'Lithuanian': 'lt', 'Latvian': 'lv',
     'Estonian': 'et', 'Macedonian': 'mk', 'Belarusian': 'be', 'Galician': 'gl',
     'Serbian': 'sr', 'Nepali': 'ne', 'Sinhala': 'si', 'Pashto': 'ps',
-    'Kurdish': 'ku', 'Somali': 'so', 'Tigrinya': 'ti', 'Yoruba': 'yo',
+    'Kurdish': 'ku', 'Somali': 'so', 'Tigrinya': 'ti', 'Yoruba': 'yo', 'Tok Pisin': 'tpi',
+    'Akan': 'ak', 'Ewe': 'ee'
 };
 
 function isTranslated() {
