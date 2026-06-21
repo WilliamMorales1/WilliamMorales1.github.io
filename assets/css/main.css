@@ -3495,3 +3495,34 @@ input, select, textarea {
 .goog-te-gadget,
 .goog-te-menu-frame { display: none !important; }
 body { top: 0px !important; }
+
+/* The Container Logic */
+[popover] {
+    border: none;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Backdrop */
+[popover]::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    
+    /* This ensures the backdrop captures the click entirely */
+    pointer-events: auto; 
+}
+
+/* The Image */
+[popover] img {
+    display: block;
+    max-height: 85vh;
+    max-width: 90vw;
+    border-radius: 15px;
+    box-shadow: 0 10px 50px rgba(0,0,0,1);
+}

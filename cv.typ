@@ -106,34 +106,29 @@ Linguistics and Data Science
 #section("Selected Projects")
 
 #v(0.5em)
-#field("Project", "Praat Data Analysis Scripts")
-#field("URL", "https://github.com/WilliamMorales1/PraatDataAnalysis")
-#field("Tools", "Praat scripting language")
-#field("Description", "Praat scripts for batch WAV processing and automated acoustic measurements in a study on dialectal variation and sound perception.")
+#field("Project", "Multilingual Wordle")
+#field("URL", "https://multilingual-wordle.fly.dev/")
+#field("Github", "https://github.com/WilliamMorales1/Multilingual-Wordle")
+#field("Tools", "Go; SQLite")
+#field("Description", "Wiktionary-based Wordle that works for almost any language on Wiktionary.")
 
 #v(0.5em)
 #field("Project", "An App for Language Preservation")
-#field("URL", "https://github.com/claytakiler/Heritage-Project")
+#field("Github", "https://github.com/Project-Heritera/Heritage-Project")
 #field("Tools", "Django; SQLite; React; Tailwind")
-#field("Description", "Collaborative application for heritage language learners and endangered language communities to document and learn their languages; accessibility-focused.")
-
-#v(0.5em)
-#field("Project", "Multilingual Wordle")
-#field("URL", "https://github.com/WilliamMorales1/Multilingual-Wordle")
-#field("Tools", "Go; SQLite")
-#field("Description", "Command-line Wordle supporting any language with Wiktionary entries. Word lists pulled dynamically; configurable word length and guess count.")
+#field("Description", "Collaborative application for heritage language learners and endangered language communities to document and learn their languages.")
 
 #v(0.5em)
 #field("Project", "Swadesh Word-A-Day")
-#field("URL", "https://github.com/WilliamMorales1/Swadesh-Word-A-Day")
-#field("Tools", "Python; BeautifulSoup4; ntfy.sh")
+#field("Github", "https://github.com/WilliamMorales1/Swadesh-Word-A-Day")
+#field("Tools", "Go; ntfy.sh")
 #field("Description", "Scrapes Wiktionary Swadesh list appendices across 200+ languages; sends daily word-of-the-day push notifications via ntfy.sh on a cron schedule.")
 
 #v(0.5em)
 #field("Project", "GuideOverride")
-#field("URL", "https://github.com/CSC4700-BRCC/Version-2")
+#field("Github", "https://github.com/CSC4700-BRCC/Version-2")
 #field("Tools", "Django; SQLite; React; OpenAI; Tailwind")
-#field("Description", "Improve efficiency of processing student override requests for classes by using an AI Agent for recommendations.")
+#field("Description", "Project in collaboration with Baton Rouge Community College to improve efficiency of processing student override requests for classes by using an LLM workflow for recommendations.")
 
 #section("Leadership and Organizations")
 
@@ -145,7 +140,7 @@ Linguistics and Data Science
 #field("Role", "Vice-President")
 #field("Organization", "Creole Club (Organizasyon Langaj e Lakilchi Kreyol Lalwizyàn), LSU")
 #field("Dates", "2025 – present")
-#field("Note", "Featured in LSU Reveille: https://lsureveille.com/265157/entertainment/lsu-creole-club/")
+#field("Note", "In LSU Reveille News: https://lsureveille.com/265157/entertainment/lsu-creole-club/")
 
 #v(0.5em)
 #field("Role", "Vice-President")
@@ -175,9 +170,13 @@ Linguistics and Data Science
 #field("Award", "President's Student Aid")
 #field("Date", "Every semester enrolled")
 
+#v(0.5em)
+#field("Award", "President's Honor Roll")
+#field("Date", "Fall 2024, Spring 2024, Fall 2025, Spring 2026")
+
 #section("Skills and Languages")
 
 #field("Programming Languages", "Python; SQL; Go; Java; R")
-#field("Libraries and Frameworks", "pandas; numpy; BeautifulSoup4; Django; React; SpaCy; SQLite; PostgreSQL")
-#field("Domain Tools", "Praat scripting; corpus linguistics methods; acoustic analysis")
-#field("Human Languages", "English (Native); Spanish (Proficient); French (Intermediate); Japanese (Intermediate)")
+#field("Libraries and Frameworks", "pandas; numpy; Django; React; SpaCy; SQLite; PostgreSQL")
+#field("Domain Tools", "Corpus linguistics methods; Praat scripting; acoustic analysis")
+#field("Natural Languages", "English (Native); Spanish (Proficient); French (Intermediate); Japanese (Intermediate)")
