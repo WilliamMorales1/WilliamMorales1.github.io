@@ -3519,10 +3519,369 @@ body { top: 0px !important; }
 }
 
 /* The Image */
-[popover] img {
+div[popover] img {
     display: block;
-    max-height: 85vh;
-    max-width: 90vw;
+    width: auto !important;
+    height: auto !important;
+    max-width: min(70vw, 1100px) !important;
+    max-height: 70vh !important;
     border-radius: 15px;
     box-shadow: 0 10px 50px rgba(0,0,0,1);
+}
+
+/* ==========================================
+ * Accent / Section Header Treatment
+ * ========================================== */
+
+:root {
+	--accent-mint: #4acaa8;
+	--accent-mint-dim: #3a9c83;
+}
+
+#main h3, #main h4 {
+	position: relative;
+	padding-bottom: 0.35em;
+	margin-bottom: 0.9em;
+}
+
+#main h3::after, #main h4::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 3.5em;
+	border-radius: 2px;
+	background: var(--accent-mint);
+}
+
+#main h3::after {
+	width: 5em;
+}
+
+/* ==========================================
+ * Timeline (Conference Presentations)
+ * ========================================== */
+
+.timeline {
+	list-style: none;
+	margin: 0 0 2.25em 0;
+	padding: 0;
+	position: relative;
+}
+
+.timeline::before {
+	content: '';
+	position: absolute;
+	top: 0.4em;
+	bottom: 0.4em;
+	left: 0.5em;
+	width: 2px;
+	background: var(--accent-mint-dim);
+}
+
+.timeline > .tl-year {
+	position: relative;
+	padding: 0 0 1.6em 2em;
+}
+
+.timeline > .tl-year:last-child {
+	padding-bottom: 0;
+}
+
+.timeline > .tl-year::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.2em;
+	width: 1.05em;
+	height: 1.05em;
+	border-radius: 50%;
+	background: var(--accent-mint);
+	border: 3px solid #333;
+}
+
+.timeline .tl-meta {
+	display: block;
+	font-size: 1.1em;
+	font-weight: 700;
+	color: var(--accent-mint);
+	margin-bottom: 0.6em;
+}
+
+.timeline .tl-group {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.timeline .tl-group li {
+	position: relative;
+	padding: 0 0 1.1em 1.4em;
+	border-left: 2px solid #4a4a4a;
+}
+
+.timeline .tl-group li:last-child {
+	padding-bottom: 0;
+	border-left-color: transparent;
+}
+
+.timeline .tl-group li::before {
+	content: '';
+	position: absolute;
+	left: -0.3em;
+	top: 0.35em;
+	width: 0.55em;
+	height: 0.55em;
+	border-radius: 50%;
+	background: var(--accent-mint-dim);
+}
+
+.timeline .tl-title {
+	display: block;
+	font-weight: 700;
+	color: #f5f5f5;
+}
+
+/* ==========================================
+ * Research Cards
+ * ========================================== */
+
+.research-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+	gap: 1em;
+	list-style: none;
+	margin: 0 0 2.25em 0;
+	padding: 0;
+}
+
+.research-card {
+	background: #3a3a3a;
+	border: 1px solid #444;
+	border-left: 3px solid var(--accent-mint);
+	border-radius: 6px;
+	padding: 1.1em 1.2em;
+	transition: background 0.2s ease;
+}
+
+.research-card:hover {
+	background: #404040;
+}
+
+.research-card h5 {
+	margin-bottom: 0.4em;
+}
+
+.research-card .rc-meta {
+	display: block;
+	font-size: 0.85em;
+	color: var(--accent-mint);
+	margin-bottom: 0.6em;
+}
+
+.research-card p {
+	margin: 0;
+}
+
+/* ==========================================
+ * Academic History Cards (Education)
+ * ========================================== */
+
+#education .features {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+}
+
+@media screen and (max-width: 736px) {
+	#education .features {
+		grid-template-columns: 1fr;
+	}
+}
+
+#education .features article {
+	background: #3a3a3a;
+	border: 1px solid #444;
+	border-top: none;
+	border-left: 3px solid var(--accent-mint);
+	border-radius: 6px;
+	margin-bottom: 0;
+	padding: 0;
+	overflow: hidden;
+	transition: background 0.2s ease;
+}
+
+#education .features article:hover {
+	background: #404040;
+}
+
+#education .features article .image {
+	display: block;
+	width: 100%;
+}
+
+#education .features article .image img {
+	display: block;
+	width: 100%;
+	height: 18em;
+	object-fit: cover;
+}
+
+#education .features article .inner {
+	display: block;
+	width: auto;
+	padding: 1em 1.2em;
+}
+
+/* ==========================================
+ * Project Cards (Personal Projects)
+ * ========================================== */
+
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+	gap: 1em;
+	list-style: none;
+	margin: 0 0 2.25em 0;
+	padding: 0;
+}
+
+.project-card {
+	background: #3a3a3a;
+	border: 1px solid #444;
+	border-left: 3px solid var(--accent-mint);
+	border-radius: 6px;
+	padding: 1.1em 1.2em;
+	transition: background 0.2s ease;
+}
+
+.project-card:hover {
+	background: #404040;
+}
+
+.project-card-wide {
+	grid-column: 1 / -1;
+}
+
+.project-card h5 {
+	margin-bottom: 0.4em;
+}
+
+.project-card p {
+	margin: 0 0 0.6em 0;
+}
+
+.project-card .pc-meta {
+	display: block;
+	font-size: 0.85em;
+	font-style: italic;
+	color: var(--accent-mint);
+}
+
+/* ==========================================
+ * Card Grid (Clubs, Awards, Other Projects)
+ * ========================================== */
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	gap: 0.9em;
+	list-style: none;
+	margin: 0 0 2.25em 0;
+	padding: 0;
+}
+
+.card-grid li {
+	background: #3a3a3a;
+	border: 1px solid #444;
+	border-left: 3px solid var(--accent-mint);
+	border-radius: 6px;
+	padding: 0.9em 1em;
+	transition: background 0.2s ease;
+}
+
+.card-grid li:hover {
+	background: #404040;
+}
+
+.card-grid .card-role {
+	display: block;
+	font-weight: 700;
+	color: #f5f5f5;
+}
+
+.skill-icon {
+	width: 1.1em;
+	height: 1.1em;
+	margin-right: 0.5em;
+	vertical-align: -0.18em;
+}
+
+.skill-icon-crop {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 220% 100%;
+	border-radius: 2px;
+}
+
+.card-grid .card-meta {
+	display: block;
+	font-size: 0.85em;
+	color: #aaa;
+	margin-top: 0.2em;
+}
+
+/* ==========================================
+ * Conference Photo Grid Hover Captions
+ * ========================================== */
+
+.photo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(11em, 1fr));
+	gap: 0.75em;
+	margin-bottom: 1.5em;
+}
+
+.photo-grid .photo-item {
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.photo-grid button.image {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.photo-grid img {
+	display: block;
+	width: 100%;
+	height: 12em;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.photo-grid .photo-item:hover img {
+	transform: scale(1.06);
+}
+
+.photo-grid .photo-caption {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0.5em 0.7em;
+	font-size: 0.85em;
+	color: #fff;
+	background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.85));
+	transform: translateY(100%);
+	transition: transform 0.25s ease;
+	pointer-events: none;
+}
+
+.photo-grid .photo-item:hover .photo-caption {
+	transform: translateY(0);
 }
