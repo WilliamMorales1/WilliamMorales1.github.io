@@ -48,36 +48,36 @@
 					<p>Some images of me presenting at T-CoL, Discover Day (2025), and ASA respectively:</p>
 					<div class="photo-grid">
 						<div class="photo-item">
-							<button popovertarget="pop-1" class="image"
+							<button onclick="document.getElementById('dialog-1').showModal()" class="image"
 								style="border:none; background:none; padding:0; cursor:pointer;">
 								<img src="../images/tcol.jpg" alt="" />
 							</button>
 							<div class="photo-caption">T-CoL, 2025</div>
-							<div id="pop-1" popover class="popover-content">
+							<dialog id="dialog-1" closedby="any" class="dialog-content">
 								<img src="../images/tcol.jpg" alt="" />
-							</div>
+							</dialog>
 						</div>
 
 						<div class="photo-item">
-							<button popovertarget="pop-2" class="image"
+							<button onclick="document.getElementById('dialog-2').showModal()" class="image"
 								style="border:none; background:none; padding:0; cursor:pointer;">
 								<img src="../images/discday.jpg" alt="" />
 							</button>
 							<div class="photo-caption">Discover Day, 2025</div>
-							<div id="pop-2" popover class="popover-content">
+							<dialog id="dialog-2" closedby="any" class="dialog-content">
 								<img src="../images/discday.jpg" alt="" />
-							</div>
+							</dialog>
 						</div>
 
 						<div class="photo-item">
-							<button popovertarget="pop-3" class="image"
+							<button onclick="document.getElementById('dialog-3').showModal()" class="image"
 								style="border:none; background:none; padding:0; cursor:pointer;">
 								<img src="../images/lsa.jpg" alt="" />
 							</button>
 							<div class="photo-caption">LSA Annual Meeting</div>
-							<div id="pop-3" popover class="popover-content">
+							<dialog id="dialog-3" closedby="any" class="dialog-content">
 								<img src="../images/lsa.jpg" alt="" />
-							</div>
+							</dialog>
 						</div>
 					</div>
 
@@ -87,15 +87,18 @@
 							<ul class="tl-group">
 								<li>
 									<span class="tl-title">13th Annual LSU Discover Day Undergraduate Research & Creativity Conference</span>
+									<span class="tl-loc">Baton Rouge, LA &middot; April 2026</span>
 									<em>Presentation:</em> Tracking a Linguistic Innovation: A Sociolinguistic Investigation
 									of Intensifiers in Three Spanish-speaking Communities
 								</li>
 								<li>
 									<span class="tl-title">Southeastern Conference on Linguistics (SECOL)</span>
+									<span class="tl-loc">Atlanta, GA &middot; March 2026</span>
 									<em>Presentation:</em> A Variationist Study of Spanish Intensifiers
 								</li>
 								<li>
 									<span class="tl-title">Linguistic Society of America (LSA) Annual Meeting</span>
+									<span class="tl-loc">New Orleans, LA &middot; January 2026</span>
 									<em>Presentation:</em> Tracking a Linguistic Innovation: A Sociolinguistic Investigation
 									of Intensifiers in Three Spanish-speaking Communities
 								</li>
@@ -105,26 +108,31 @@
 							<span class="tl-meta">2025</span>
 							<ul class="tl-group">
 								<li>
-									<span class="tl-title">188th Meeting of the Acoustical Society of America (ASA)</span>
+									<span class="tl-title">188th Meeting of the Acoustical Society of America (ASA) / 25th International Congress on Acoustics</span>
+									<span class="tl-loc">New Orleans, LA &middot; May 2025</span>
 									<em>Presentation:</em> Effect of dialectal variation on listeners' perception of English
 									interdental fricatives and lateral liquid sounds
 								</li>
 								<li>
 									<span class="tl-title">12th Annual LSU Discover Day Undergraduate Research & Creativity Conference</span>
+									<span class="tl-loc">Baton Rouge, LA &middot; April 2025</span>
 									<em>Presentation:</em> A Sociolinguistic Study of Intensification in the Spanish of
 									Louisianian Puerto Ricans
 								</li>
 								<li>
-									<span class="tl-title">Fifth Annual Emory Undergraduate Linguistics Conference</span>
+									<span class="tl-title">Fifth Annual Emory Undergraduate Linguistics Conference (EULC5)</span>
+									<span class="tl-loc">Virtual &middot; April 2025</span>
 									<em>Presentation:</em> A Variationist Analysis of Intensification in Spanish
 								</li>
 								<li>
 									<span class="tl-title">Seventh Annual Tulane Conference on Linguistics (T-CoL)</span>
+									<span class="tl-loc">New Orleans, LA &middot; March 2025</span>
 									<em>Presentation:</em> A Sociolinguistic Study of Spanish Intensifiers across two
 									Dialects
 								</li>
 								<li>
-									<span class="tl-title">Department of Communication Sciences and Disorders Roundtable</span>
+									<span class="tl-title">Department of Communication Sciences and Disorders Roundtable, LSU</span>
+									<span class="tl-loc">Baton Rouge, LA &middot; 2025</span>
 									<em>Presentation:</em> Effect of dialectal variation on listeners' perception of English
 									interdental fricatives and lateral liquid sounds
 								</li>
@@ -134,7 +142,8 @@
 							<span class="tl-meta">2024</span>
 							<ul class="tl-group">
 								<li>
-									<span class="tl-title">Summer Undergraduate Research Forum</span>
+									<span class="tl-title">Summer Undergraduate Research Forum, LSU</span>
+									<span class="tl-loc">Baton Rouge, LA &middot; August 2024</span>
 									<em>Presentation:</em> A Sociolinguistic Study of Intensification in the Spanish of
 									Louisianian Puerto Ricans
 								</li>
@@ -148,22 +157,26 @@
 								<h5>A Variationist Study of Spanish Intensifiers</h5>
 								<span class="rc-meta">Mentor: Dr. Rafael Orozco &middot; Fall 2023 - present</span>
 								<p>
-									We are working on researching intensifiers in Spanish and comparing that data to other
-									sociolinguistic phenomena. I created my own algorithm to collect and analyze data of
-									intensifiers in transcripts of Spanish dialects. We are currently working to get it
-									published.
+									A multivariate study of 7,835 intensifier tokens across Medellín, Tunja (Colombia), and
+									Louisiana Puerto Rican Spanish, examining how gender, age, education, and adjective type
+									condition intensifier choice. I developed a custom Python corpus pipeline to extract and
+									classify tokens from sociolinguistic interview transcripts. Findings show periphrastic
+									intensification dominates, and <em>súper</em> is an ongoing innovation led by young women of
+									higher socioeconomic status. Manuscript submitted to the
+									<em>Proceedings of the Linguistic Society of America</em>; currently under review.
 								</p>
 							</li>
 							<li class="research-card">
-								<h5>Effect of dialectal variation on listeners' perception of English interdental fricatives and
-									lateral liquid sounds</h5>
-								<span class="rc-meta">Mentors: Dr. Hunju Chung & Dr. Irina Shport &middot; Spring 2024 - present</span>
+								<h5>The Effect of Sociophonetic Variation on Listeners' Perception of English Interdental Fricatives</h5>
+								<span class="rc-meta">Mentors: Dr. Hyunju Chung & Dr. Irina Shport &middot; Spring 2024 - present</span>
 								<p>
-									We worked together to to test the perception of sounds according to different English
-									Dialects.
-									I primarily worked on categorizing the stimuli, making the Qualtrics survey. Right now, I am
-									helping to make any changes to Praat scripts that they may need, and helping with acoustic
-							analysis. We are also currently working to get the study published.
+									Investigated whether stereotypical associations between interdental fricative variation
+									(stopping and labialization) and talker race influence listener perception of ethnolect
+									(AAE vs. Southern White English) across 108 listeners. I categorized stimuli, built the
+									Qualtrics survey, and contributed to Praat acoustic analysis. Results show listeners use
+									socio-ethnic stereotypes in speech perception, with word-final labialization serving as a
+									stronger marker of sounding Black than word-initial stopping. Manuscript submitted to the
+									<em>Journal of Speech, Language, and Hearing Research</em>; currently under review.
 								</p>
 							</li>
 						</ul>
@@ -264,7 +277,6 @@
 	<script src="../assets/js/breakpoints.min.js"></script>
 	<script src="../assets/js/util.js"></script>
 	<script src="../assets/js/main.js"></script>
-	<script src="../assets/js/new-tab-link.js"></script>
 	<div id="google_translate_element" style="display:none"></div>
 	<script>
 		function googleTranslateElementInit() {

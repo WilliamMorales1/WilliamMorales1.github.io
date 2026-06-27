@@ -6,102 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="../assets/css/main.css" />
-	<style>
-		.podcast-player {
-			display: flex;
-			align-items: center;
-			gap: 20px;
-			background: #222;
-			border-radius: 20px;
-			padding: 20px 24px 20px 20px;
-			max-width: 1000px;
-			box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
-			margin: 0.5em 0 0.4em;
-			border: 1px solid #1e1e1e;
-		}
-
-		.podcast-thumb-img {
-			width: 152px;
-			height: 142px;
-			border-radius: 8px;
-			object-fit: cover;
-			flex-shrink: 0;
-			display: block;
-		}
-
-		.podcast-controls {
-			flex: 1;
-			display: flex;
-			align-items: center;
-			gap: 10px;
-			min-width: 0;
-		}
-
-		.podcast-play-btn {
-			width: 56px;
-			height: 56px;
-			border-radius: 50%;
-			border: none;
-			background: var(--podcast-accent, #4acaa8);
-			color: #000;
-			cursor: pointer;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-shrink: 0;
-			transition: opacity 0.15s;
-			padding: 0;
-		}
-
-		.podcast-play-btn:hover {
-			opacity: 0.8;
-		}
-
-		.podcast-progress-area {
-			flex: 1;
-			display: flex;
-			align-items: center;
-			gap: 6px;
-			min-width: 0;
-		}
-
-		.podcast-time {
-			font-size: 0.9em;
-			color: #999;
-			white-space: nowrap;
-			font-family: monospace;
-		}
-
-		.podcast-seek {
-			flex: 1;
-			-webkit-appearance: none;
-			appearance: none;
-			height: 6px;
-			border-radius: 2px;
-			background: #444;
-			outline: none;
-			cursor: pointer;
-			min-width: 0;
-		}
-
-		.podcast-seek::-webkit-slider-thumb {
-			-webkit-appearance: none;
-			width: 18px;
-			height: 18px;
-			border-radius: 50%;
-			background: var(--podcast-accent, #4acaa8);
-			cursor: pointer;
-		}
-
-		.podcast-seek::-moz-range-thumb {
-			width: 18px;
-			height: 18px;
-			border-radius: 50%;
-			background: var(--podcast-accent, #4acaa8);
-			border: none;
-			cursor: pointer;
-		}
-	</style>
+	<link rel="stylesheet" href="../assets/css/podcast.css" />
 </head>
 
 <body class="is-preload dark-mode">
@@ -260,11 +165,33 @@
 							<h5><a href="https://github.com/WilliamMorales1/Swadesh-Word-A-Day" target="_blank"
 									rel="noopener noreferrer">Swadesh Word-A-Day</a></h5>
 							<p>
-								A Go tool that scrapes Wiktionary's Swadesh list appendices across 200+ languages to build a
-								vocabulary dataset, then sends a daily word-of-the-day push notification via ntfy.sh. Supports
-								filtering to the 30 most-spoken languages and is designed to run on a cron schedule.
+								A Python tool that scrapes Wiktionary's Swadesh list appendices across 200+ languages to build a
+								vocabulary dataset, then sends a daily word-of-the-day push notification via ntfy.sh. Scraping
+								is parallelized across 8 workers, supports filtering to the 30 most-spoken languages, and is
+								designed to run on a cron schedule.
 							</p>
-							<span class="pc-meta">Tools: Go, ntfy.sh</span>
+							<span class="pc-meta">Tools: Python, ntfy.sh</span>
+						</li>
+
+						<li class="project-card">
+							<h5><a href="https://github.com/WilliamMorales1/NLSyntaxHighlighting-Go" target="_blank"
+									rel="noopener noreferrer">Natural Syntax LSP</a></h5>
+							<p>
+								Parts-of-speech semantic highlighting for VS Code via a local Go LSP server running BERT
+								inference with ONNX Runtime. Hover over any word to see its POS tag and confidence score.
+							</p>
+							<span class="pc-meta">Tools: Go, ONNX Runtime, TypeScript (VS Code Extension)</span>
+						</li>
+
+						<li class="project-card">
+							<h5><a href="https://github.com/WilliamMorales1/OutOfTheAbyssDMTracker" target="_blank"
+									rel="noopener noreferrer">Out of the Abyss DM Companion</a></h5>
+							<p>
+								A local web app for running the <em>Out of the Abyss</em> D&amp;D 5e campaign. Tracks NPCs,
+								monsters, sessions, maps, and initiative, with a local-LLM chat assistant and semantic lore
+								search powered by Ollama.
+							</p>
+							<span class="pc-meta">Tools: Go, TypeScript, SQLite, Ollama</span>
 						</li>
 					</ul>
 				</div>
@@ -288,7 +215,7 @@
 	<script src="../assets/js/breakpoints.min.js"></script>
 	<script src="../assets/js/util.js"></script>
 	<script src="../assets/js/main.js"></script>
-	<script src="../assets/js/new-tab-link.js"></script>
+	<script src="../assets/js/podcast.js"></script>
 	<div id="google_translate_element" style="display:none"></div>
 	<script>
 		function googleTranslateElementInit() {
@@ -296,78 +223,6 @@
 		}
 	</script>
 	<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-	<script>
-		(function () {
-			var audio = document.getElementById('podcast-audio');
-			var playBtn = document.getElementById('podcast-play-btn');
-			var playIcon = document.getElementById('podcast-play-icon');
-			var pauseIcon = document.getElementById('podcast-pause-icon');
-			var seekBar = document.getElementById('podcast-seek');
-			var currentEl = document.getElementById('podcast-current');
-			var totalEl = document.getElementById('podcast-total');
-			var thumb = document.getElementById('podcast-thumb');
-			var player = document.getElementById('podcast-player');
-
-			function fmt(s) {
-				var m = Math.floor(s / 60);
-				var sec = Math.floor(s % 60);
-				return m + ':' + (sec < 10 ? '0' : '') + sec;
-			}
-
-			function updateSeekFill() {
-				var pct = seekBar.max > 0 ? (seekBar.value / seekBar.max) * 100 : 0;
-				seekBar.style.background = 'linear-gradient(to right, #4acaa8 ' + pct + '%, #444 ' + pct + '%)';
-			}
-
-			function setDuration() {
-				if (audio.duration && isFinite(audio.duration)) {
-					seekBar.max = audio.duration;
-					totalEl.textContent = fmt(audio.duration);
-				}
-			}
-
-			audio.addEventListener('loadedmetadata', setDuration);
-			audio.addEventListener('durationchange', setDuration);
-
-			// In case metadata already loaded before the script ran
-			if (audio.readyState >= 1) setDuration();
-
-			audio.addEventListener('loadedmetadata', function () {
-				seekBar.max = audio.duration;
-				totalEl.textContent = fmt(audio.duration);
-			});
-
-			audio.addEventListener('timeupdate', function () {
-				seekBar.value = audio.currentTime;
-				currentEl.textContent = fmt(audio.currentTime);
-				updateSeekFill();
-			});
-
-			audio.addEventListener('ended', function () {
-				playIcon.style.display = '';
-				pauseIcon.style.display = 'none';
-				seekBar.value = 0;
-				updateSeekFill();
-			});
-
-			playBtn.addEventListener('click', function () {
-				if (audio.paused) {
-					audio.play();
-					playIcon.style.display = 'none';
-					pauseIcon.style.display = '';
-				} else {
-					audio.pause();
-					playIcon.style.display = '';
-					pauseIcon.style.display = 'none';
-				}
-			});
-
-			seekBar.addEventListener('input', function () {
-				audio.currentTime = seekBar.value;
-				updateSeekFill();
-			});
-		})();
-	</script>
 </body>
 
 </html>
