@@ -78,12 +78,12 @@
 
 #cventry(
   "A Variationist Study of Spanish Intensifiers",
-  "Fall 2023 – present",
+  "Fall 2023 – Spring 2026",
   sub: "Mentor: Dr. Rafael Orozco · Louisiana State University",
   body: [
     - Variationist analysis of 7,835 tokens across Medellín, Tunja (Colombia), and Louisiana Puerto Rican communities; examined periphrastic vs.\ morphological intensification conditioned by gender, age, education, and adjective type
     - Developed a custom Python algorithm (TagAnt + manual verification) to extract and classify intensifier tokens from dialect transcripts
-    - Manuscript submitted to _Proceedings of the Linguistic Society of America_; currently under review
+    - Published in _Proceedings of the Linguistic Society of America_ 11(1). #link("https://doi.org/10.3765/plsa.v11i1.6091")[doi:10.3765/plsa.v11i1.6091]
   ]
 )
 
