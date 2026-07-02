@@ -139,7 +139,7 @@
     - Processes POS-tagged sociolinguistic interview transcripts across 6 Spanish dialect corpora (Cali, Cartagena, Medellín, Tunja, Louisiana Puerto Rican, and historical) to extract intensifier tokens with adjective/adverb hosts
     - Classifies predication type (predicative vs.\ attributive), resolves apocope, handles -ísimo superlatives and archi- prefixation, detects double-intensifier constructions, and identifies proximate verb
     - Merges token-level output with speaker metadata (age, sex, dialect) for quantitative analysis; R and Python analysis layer produces rate-by-age plots, Zipf distributions, log-adjusted frequency graphs, and Bayesian models
-    - Used in multiple conference presentations across national and regional venues; manuscript in preparation
+    - Used in multiple conference presentations across national and regional venues; published in _Proceedings of the Linguistic Society of America_ 11(1). #link("https://doi.org/10.3765/plsa.v11i1.6091")[doi:10.3765/plsa.v11i1.6091]
   ]
 )
 
@@ -194,10 +194,10 @@
 
 #cventry(
   "Natural Syntax LSP",
-  "github.com/WilliamMorales1/NLSyntaxHighlighting-Go",
-  sub: "Go · ONNX Runtime · TypeScript (VS Code Extension)",
+  "github.com/WilliamMorales1/Natural-Syntax-LSP",
+  sub: "Go · ONNX Runtime · Python · TypeScript (VS Code Extension)",
   body: [
-    - Parts-of-speech semantic highlighting for VS Code via a local Go LSP server running BERT inference with ONNX Runtime; hover over any word to see its POS tag and confidence score
+    - Parts-of-speech, semantic-embedding, or dependency-parse highlighting for VS Code via a local Go LSP server running ONNX inference (BERT/MobileBERT, MPNet/MiniLM, or a biaffine UD parser); hover any word for its tag, head/dependents, and a Wiktionary definition
   ]
 )
 
