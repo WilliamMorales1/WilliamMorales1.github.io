@@ -137,27 +137,9 @@
   sub: "Python · pandas · R",
   body: [
     - Processes POS-tagged sociolinguistic interview transcripts across 6 Spanish dialect corpora (Cali, Cartagena, Medellín, Tunja, Louisiana Puerto Rican, and historical) to extract intensifier tokens with adjective/adverb hosts
-    - Classifies predication type (predicative vs.\ attributive), resolves apocope, handles -ísimo superlatives and archi- prefixation, detects double-intensifier constructions, and identifies proximate verb
+    - Classifies predication type (predicative vs. attributive), resolves apocope, handles -ísimo superlatives and archi- prefixation, detects double-intensifier constructions, and identifies proximate verb
     - Merges token-level output with speaker metadata (age, sex, dialect) for quantitative analysis; R and Python analysis layer produces rate-by-age plots, Zipf distributions, log-adjusted frequency graphs, and Bayesian models
     - Used in multiple conference presentations across national and regional venues; published in _Proceedings of the Linguistic Society of America_ 11(1). #link("https://doi.org/10.3765/plsa.v11i1.6091")[doi:10.3765/plsa.v11i1.6091]
-  ]
-)
-
-#cventry(
-  "An Online Dictionary of Louisiana Creole",
-  "github.com/WilliamMorales1/louisiana-creole-online-dictionary",
-  sub: "Django · Valdman Dictionary of Louisiana Creole",
-  body: [
-    - Web-based dictionary for a critically endangered language; built with LSU Creole Club members to support documentation and revitalization
-  ]
-)
-
-#cventry(
-  "Spanish Future Tense Research",
-  "github.com/WilliamMorales1/SpanishFutureResearch",
-  sub: "Python · pandas",
-  body: [
-    - Analyzes future-tense expressions in Spanish corpora; includes data cleaning, grammatical tagging, and dataframe construction for quantitative sociolinguistic analysis
   ]
 )
 
@@ -207,6 +189,7 @@
   sub: "Django · SQLite · React · OpenAI · Tailwind",
   body: [
     - Collaboration with Baton Rouge Community College to streamline student course-override requests using an LLM recommendation workflow
+    - Featured: #link("https://www.businessreport.com/business/lsu-ai-showcase-baton-rouge-business-2026")[Business Report — LSU AI Showcase]
   ]
 )
 
