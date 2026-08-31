@@ -108,6 +108,7 @@
 - *LSA Annual Meeting* — Tracking a Linguistic Innovation: A Sociolinguistic Investigation of Intensifiers in Three Spanish-speaking Communities. New Orleans, LA. January 2026.
 - *Southeastern Conference on Linguistics (SECOL)* — A Variationist Study of Spanish Intensifiers. Atlanta, GA. March 2026.
 - *13th Annual LSU Discover Day* — Tracking a Linguistic Innovation: A Sociolinguistic Investigation of Intensifiers in Three Spanish-speaking Communities. Baton Rouge, LA. April 2026.
+- *XXI Congreso de la Asociación de Lingüística y Filología de América Latina (ALFAL)* — Una investigación variacionista de la intensificatión en el español colombiano. Lima, Peru. August 2026.
 
 #v(0.3em)
 *2025*
