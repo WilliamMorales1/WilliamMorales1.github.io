@@ -55,7 +55,7 @@
 
 #v(0.5em)
 #text(size: 10.5pt)[
-  Variationist sociolinguistics and quantitative corpus methods, with a focus on Spanish dialects and morphosyntactic change. Phonetics and speech perception, particularly dialectal effects on listener judgments. Language documentation and revitalization for endangered languages, especially Louisiana Creole (Kouri-Vini). Computational approaches to linguistic analysis, including low-resource speech synthesis and NLP tooling for under-resourced languages.
+  Variationist sociolinguistics and quantitative corpus methods, with a focus on Spanish dialects and morphosyntactic change. Phonetics and speech perception, particularly dialectal effects on listener judgments. Language documentation and revitalization for endangered languages, especially Louisiana Creole (Kouri-Vini). Computational approaches to linguistic analysis, including what speech models encode about phonology and NLP tooling for under-resourced languages.
 ]
 #v(0.3em)
 
@@ -95,6 +95,17 @@
     - Investigated whether sociophonetic stereotypes influence listener identification of ethnolect (AAE vs.\ SWE) and perception of /θ, ð/ via forced-choice and Visual Analog Scale tasks with 108 listeners
     - Categorized stimuli (stopping and labialization variants), built Qualtrics survey, and contributed to Praat acoustic analysis
     - Manuscript submitted to _Journal of Speech, Language, and Hearing Research_; currently under review
+  ]
+)
+
+#cventry(
+  "Honors Thesis: Phonological Feature Retention in Distilled Speech Models",
+  "Fall 2026 – present",
+  sub: "Mentor: Dr. Keith Mills · Louisiana State University",
+  body: [
+    - Tests whether the linear phonological feature structure found in full-size self-supervised speech models (HuBERT, wav2vec2, WavLM) survives distillation, and which features degrade first
+    - Built a configuration-driven probing pipeline: per-layer hidden-state extraction, phone-level pooling over forced-aligned boundaries, and per-contrast scoring; PanPhon and Phoible feature backends are interchangeable without code changes
+    - Corrected an evaluation flaw in the standard approach, where cross-validation folds that are not phone-disjoint let a probe score by recognizing the phone rather than the feature
   ]
 )
 
@@ -238,6 +249,6 @@
 #section("Skills and Languages")
 
 #field("Programming Languages", "Python; SQL; Go; Java; R; TypeScript/JavaScript")
-#field("Libraries & Frameworks", "pandas; numpy; Django; React; SpaCy; SQLite; PostgreSQL; Ollama")
+#field("Libraries & Frameworks", "pandas; numpy; PyTorch; Hugging Face Transformers; Django; React; SpaCy; SQLite; PostgreSQL; Ollama")
 #field("Domain Tools", "Corpus linguistics methods; Praat scripting; acoustic analysis; IPA")
 #field("Natural Languages", "English (Native); Spanish (Proficient); French (Intermediate); Japanese (Intermediate); Chinese (Intermediate)")

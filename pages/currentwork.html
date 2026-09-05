@@ -75,13 +75,19 @@
 						</li>
 
 						<li class="project-card">
-							<h5>An Honors Thesis / Capstone</h5>
+							<h5>Honors Thesis: Phonological Structure in Distilled Speech Models</h5>
 							<p>
-								Right now we are thinking about creating a IPA-based, language-agnostic TTS model that could be
-								used to make TTS for langauges when there are fewer amounts of acoustic data to make a dedicated
-								TTS model for.
+								Full-size self-supervised speech models encode phonological features as linear structure, so that
+								the vector for [b] can be recovered from [d] &minus; [t] + [p]. The models that actually get
+								deployed are distilled down to a fraction of that size, and nobody has checked whether that
+								structure survives being compressed. I built a pipeline that pulls per-layer hidden states out of
+								both the teacher models and their distilled students, pools them by phone using forced-aligned
+								boundaries, and scores every phonological contrast separately, so I can see which features break
+								down first instead of only seeing an average. The feature system is swappable, so the same run can
+								be scored with PanPhon's 22 features or a Phoible-derived set of 38.
 							</p>
-							<span class="pc-meta">Mentor: Dr. Keith Mills &mdash; Expected: Fall 2026&ndash;Spring 2026</span>
+							<span class="pc-meta">Tools: Python, PyTorch, HuBERT / wav2vec2 / WavLM, DistilHuBERT, PanPhon, Phoible, LibriTTS</span>
+							<span class="pc-meta">Mentor: Dr. Keith Mills &mdash; Expected: Fall 2026&ndash;Spring 2027</span>
 						</li>
 
 						<li class="project-card">
