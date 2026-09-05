@@ -90,7 +90,7 @@
 #cventry(
   "Dialectal Variation and Perception of English Interdental Fricatives and Lateral Liquids",
   "Spring 2024 – present",
-  sub: "Mentors: Dr. Hunju Chung; Dr. Irina Shport · Louisiana State University",
+  sub: "Mentors: Dr. Hyunju Chung; Dr. Irina Shport · Louisiana State University",
   body: [
     - Investigated whether sociophonetic stereotypes influence listener identification of ethnolect (AAE vs.\ SWE) and perception of /θ, ð/ via forced-choice and Visual Analog Scale tasks with 108 listeners
     - Categorized stimuli (stopping and labialization variants), built Qualtrics survey, and contributed to Praat acoustic analysis
