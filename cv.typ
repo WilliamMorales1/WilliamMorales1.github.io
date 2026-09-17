@@ -239,6 +239,8 @@
 #section("Awards and Funding")
 
 #v(0.1em)
+#cventry("Baker Hughes Endowed Scholarship", "Fall 2026")
+#cventry("Adrian Virginia Lazarus Memorial Scholarship", "Spring 2026")
 #cventry("Gulf Scholars Program, LSU", "Summer 2024")
 #cventry("President's Honor Roll", "Fall 2024, Spring 2024, Fall 2025, Spring 2026")
 #cventry("Honors TOPS Scholarship", "Fall 2023 – present")
