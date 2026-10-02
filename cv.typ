@@ -78,7 +78,7 @@
 
 #cventry(
   "A Variationist Study of Spanish Intensifiers",
-  "Fall 2023 – Spring 2026",
+  "Fall 2023 – present",
   sub: "Mentor: Dr. Rafael Orozco · Louisiana State University",
   body: [
     - Variationist analysis of 7,835 tokens across Medellín, Tunja (Colombia), and Louisiana Puerto Rican communities; examined periphrastic vs.\ morphological intensification conditioned by gender, age, education, and adjective type
@@ -119,7 +119,7 @@
 - *LSA Annual Meeting* — Tracking a Linguistic Innovation: A Sociolinguistic Investigation of Intensifiers in Three Spanish-speaking Communities. New Orleans, LA. January 2026.
 - *Southeastern Conference on Linguistics (SECOL)* — A Variationist Study of Spanish Intensifiers. Atlanta, GA. March 2026.
 - *13th Annual LSU Discover Day* — Tracking a Linguistic Innovation: A Sociolinguistic Investigation of Intensifiers in Three Spanish-speaking Communities. Baton Rouge, LA. April 2026.
-- *XXI Congreso de la Asociación de Lingüística y Filología de América Latina (ALFAL)* — Una investigación variacionista de la intensificatión en el español colombiano. Lima, Peru. August 2026.
+- *XXI Congreso de la Asociación de Lingüística y Filología de América Latina (ALFAL)* — Una investigación variacionista de la intensificación en el español colombiano. Lima, Peru. August 2026.
 
 #v(0.3em)
 *2025*
@@ -228,7 +228,7 @@
 #cventry("Hackathon (SASE)", "Spring 2024")
 #cventry(
   "Jill Brody's Linguistic Meetup Day — Student Linguistics Association, LSU",
-  "Fall 2023",
+  "Spring 2023",
   body: [
     - Student-organized event to introduce undergraduates to linguistics research and encourage participation in the field
   ]
@@ -242,7 +242,7 @@
 #cventry("Baker Hughes Endowed Scholarship", "Fall 2026")
 #cventry("Adrian Virginia Lazarus Memorial Scholarship", "Spring 2026")
 #cventry("Gulf Scholars Program, LSU", "Summer 2024")
-#cventry("President's Honor Roll", "Fall 2024, Spring 2024, Fall 2025, Spring 2026")
+#cventry("President's Honor Roll", "Spring 2024, Fall 2024, Fall 2025, Spring 2026")
 #cventry("Honors TOPS Scholarship", "Fall 2023 – present")
 #cventry("President's Student Aid", "Fall 2023 – present")
 
