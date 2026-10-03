@@ -1,13 +1,18 @@
-name: Build CV
+name: Build and deploy site
 
 on:
   push:
     branches: [main]
-    paths: [cv.typ, resume.typ, .github/workflows/cv.yml]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -17,13 +22,26 @@ jobs:
 
       - uses: typst-community/setup-typst@v4
 
+      # PDFs land in the source dir so Jekyll copies them into _site; never committed.
       - run: |
           typst compile cv.typ cv.pdf
           typst compile resume.typ resume.pdf
 
-      # Commit back so branch-based GitHub Pages serves cv.pdf; GITHUB_TOKEN pushes don't retrigger workflows.
-      - run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add cv.pdf resume.pdf
-          git diff --cached --quiet || { git commit -m "build cv.pdf, resume.pdf"; git push; }
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
