@@ -3,7 +3,7 @@ name: Build CV
 on:
   push:
     branches: [main]
-    paths: [cv.typ, .github/workflows/cv.yml]
+    paths: [cv.typ, resume.typ, .github/workflows/cv.yml]
   workflow_dispatch:
 
 permissions:
@@ -17,11 +17,13 @@ jobs:
 
       - uses: typst-community/setup-typst@v4
 
-      - run: typst compile cv.typ cv.pdf
+      - run: |
+          typst compile cv.typ cv.pdf
+          typst compile resume.typ resume.pdf
 
       # Commit back so branch-based GitHub Pages serves cv.pdf; GITHUB_TOKEN pushes don't retrigger workflows.
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add cv.pdf
-          git diff --cached --quiet || { git commit -m "build cv.pdf"; git push; }
+          git add cv.pdf resume.pdf
+          git diff --cached --quiet || { git commit -m "build cv.pdf, resume.pdf"; git push; }
