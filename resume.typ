@@ -62,6 +62,16 @@
 )
 
 #entry(
+  "Louisiana Creole Online Dictionary",
+  "creole-dictionary.fly.dev",
+  sub: "Python · Django · SQLite · Fly.io",
+  body: [
+    - Searchable web edition of the Valdman dictionary of Louisiana Creole (Kouri-Vini), a critically endangered language: *5,139 entries*, 6,519 senses, 5,055 spelling variants
+    - Accent-insensitive and whole-word search over headwords, variants, glosses, and examples, filterable by part of speech and source; built with the LSU Creole Club
+  ]
+)
+
+#entry(
   "Natural Syntax LSP",
   "github.com/WilliamMorales1/Natural-Syntax-LSP",
   sub: "Go · ONNX Runtime · Python · TypeScript",

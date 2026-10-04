@@ -156,6 +156,14 @@
 )
 
 #cventry(
+  "Louisiana Creole Online Dictionary",
+  "creole-dictionary.fly.dev · github.com/WilliamMorales1/louisiana-creole-online-dictionary",
+  sub: "Python · Django · SQLite · Fly.io",
+  body: [
+    - Searchable web edition of the Valdman dictionary of Louisiana Creole (Kouri-Vini): 5,139 entries, 6,519 senses, and 5,055 spelling variants, with accent-insensitive and whole-word search; built with the LSU Creole Club
+  ]
+)
+#cventry(
   "Praat Data Analysis Scripts",
   "github.com/WilliamMorales1/PraatDataAnalysis",
   sub: "Praat scripting language",
