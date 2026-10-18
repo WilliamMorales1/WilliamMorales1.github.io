@@ -46,6 +46,35 @@
   ]
 ]
 
+// ── Research ──────────────────────────────────────────────────────────────────
+
+#section("Research")
+
+#entry(
+  "A Variationist Study of Spanish Intensifiers",
+  "Fall 2023 – present",
+  body: [
+    - Python pipeline extracts and classifies intensifier constructions from POS-tagged interviews across *6 dialect corpora* (*7,835 tokens*). Published in _Proc. LSA_ 11(1)
+  ]
+)
+
+#entry(
+  "Honors Thesis — Phonological Features in Distilled Speech Models",
+  "Fall 2026 – present",
+  body: [
+    - Probing pipeline over *7 distilled students* of HuBERT, wav2vec2, and WavLM on 2 corpora (TIMIT, VoxAngeles): students *4× smaller* (23.5M vs 94.4M params) keep 94–109% of teacher accuracy at best layer
+    - Config-driven extraction, phone-level pooling, and swappable feature backends; fixed a cross-validation leak where non-phone-disjoint folds inflated probe scores
+  ]
+)
+
+#entry(
+  "Speech Perception Study",
+  "Spring 2024 – present",
+  body: [
+    - Built Qualtrics experiment and Praat batch-analysis scripts for a *108-listener* study of dialect perception; manuscript under review at _JSLHR_
+  ]
+)
+
 // ── Projects ──────────────────────────────────────────────────────────────────
 
 #section("Projects")
@@ -88,36 +117,6 @@
   body: [
     - Course-override recommender built with Baton Rouge Community College over a catalog of *616 courses*; rule-based tier scoring with LLM catalog enrichment cached 90 days
     - LLM fallback across *3 providers* (OpenAI → Anthropic → Ollama); JWT auth, audited review queue; featured in _Business Report_
-  ]
-)
-
-#entry(
-  "Spanish Intensifier Corpus Pipeline",
-  "github.com/WilliamMorales1/IntensifierResearch",
-  sub: "Python · pandas · R",
-  body: [
-    - Extracts and classifies intensifier constructions from POS-tagged interviews across *6 dialect corpora*; *7,835 tokens* analyzed with Bayesian models. Published in _Proc. LSA_ 11(1)
-  ]
-)
-
-// ── Research ──────────────────────────────────────────────────────────────────
-
-#section("Research")
-
-#entry(
-  "Honors Thesis — Phonological Features in Distilled Speech Models",
-  "Fall 2026 – present",
-  body: [
-    - Probing pipeline over *7 distilled students* of HuBERT, wav2vec2, and WavLM on 2 corpora (TIMIT, VoxAngeles): students *4× smaller* (23.5M vs 94.4M params) keep 94–109% of teacher accuracy at best layer
-    - Config-driven extraction, phone-level pooling, and swappable feature backends; fixed a cross-validation leak where non-phone-disjoint folds inflated probe scores
-  ]
-)
-
-#entry(
-  "Speech Perception Study",
-  "Spring 2024 – present",
-  body: [
-    - Built Qualtrics experiment and Praat batch-analysis scripts for a *108-listener* study of dialect perception; manuscript under review at _JSLHR_
   ]
 )
 
