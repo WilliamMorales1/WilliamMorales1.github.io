@@ -248,6 +248,7 @@
 #section("Awards and Funding")
 
 #v(0.1em)
+#cventry("Hispanic Scholarship Fund", "Fall 2026 - Spring 2027")
 #cventry("Baker Hughes Endowed Scholarship", "Fall 2026")
 #cventry("Adrian Virginia Lazarus Memorial Scholarship", "Spring 2026")
 #cventry("Gulf Scholars Program, LSU", "Summer 2024")
