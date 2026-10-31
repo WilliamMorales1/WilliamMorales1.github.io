@@ -1,239 +1,495 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
+  <head>
+    <title>Current Work - William Morales</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/podcast.css" />
+  </head>
 
-<head>
-	<title>Current Work - William Morales</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="../assets/css/main.css" />
-	<link rel="stylesheet" href="../assets/css/podcast.css" />
-</head>
+  <body class="is-preload dark-mode">
+    <section id="header">
+      <header>
+        <span class="image avatar"
+          ><img src="../images/avatar.png" alt=""
+        /></span>
+        <h1 id="logo">William Morales</h1>
+        <p class="blurb">
+          Interested in all things<br />
+          Linguistics and Data Science
+        </p>
+      </header>
+      <nav id="nav">
+        <ul>
+          <li><a href="../pages/home.html">Home</a></li>
+          <li><a href="../pages/education.html">Education</a></li>
+          <li><a href="../pages/profdev.html">Professional Development</a></li>
+          <li>
+            <a href="../pages/currentwork.html" class="active"
+              >Personal Projects</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <footer>
+        <ul class="icons">
+          <li>
+            <a
+              href="https://github.com/WilliamMorales1"
+              class="icon brands fa-github"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="label">Github</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:wsmbuis5224@gmail.com"
+              class="icon solid fa-envelope"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="label">Email</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/hydragon123/"
+              class="icon brands fa-instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/william-morales-0336aa240"
+              class="icon brands fa-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="../cv.pdf"
+              class="cv-sidebar-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="cv-sidebar-icon">CV</span></a
+            >
+          </li>
+        </ul>
+      </footer>
+    </section>
 
-<body class="is-preload dark-mode">
+    <div id="wrapper">
+      <div id="main">
+        <section id="currentwork">
+          <div class="container">
+            <h3>Personal Projects</h3>
+            <p>
+              A collection of software, research, and linguistics projects I've
+              worked on. Where applicable, links to the associated GitHub
+              repository are included.
+            </p>
 
-	<section id="header">
-		<header>
-			<span class="image avatar"><img src="../images/avatar.png" alt="" /></span>
-			<h1 id="logo">William Morales</h1>
-			<p class="blurb">Interested in all things<br> Linguistics and Data Science</p>
-		</header>
-		<nav id="nav">
-			<ul>
-				<li><a href="../pages/home.html">Home</a></li>
-				<li><a href="../pages/education.html">Education</a></li>
-				<li><a href="../pages/profdev.html">Professional Development</a></li>
-				<li><a href="../pages/currentwork.html" class="active">Personal Projects</a></li>
-			</ul>
-		</nav>
-		<footer>
-			<ul class="icons">
-				<li><a href="https://github.com/WilliamMorales1" class="icon brands fa-github" target="_blank"
-						rel="noopener noreferrer"><span class="label">Github</span></a></li>
-				<li><a href="mailto:wsmbuis5224@gmail.com" class="icon solid fa-envelope" target="_blank"
-						rel="noopener noreferrer"><span class="label">Email</span></a></li>
-				<li><a href="https://www.instagram.com/hydragon123/" class="icon brands fa-instagram" target="_blank"
-						rel="noopener noreferrer"><span class="label">Instagram</span></a></li>
-				<li><a href="https://www.linkedin.com/in/william-morales-0336aa240" class="icon brands fa-linkedin" target="_blank"
-						rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
-				<li><a href="../cv.pdf" class="cv-sidebar-link" target="_blank"
-						rel="noopener noreferrer"><span class="cv-sidebar-icon">CV</span></a></li>
-			</ul>
-		</footer>
-	</section>
+            <h4>Linguistics &amp; NLP</h4>
 
-	<div id="wrapper">
-		<div id="main">
-			<section id="currentwork">
-				<div class="container">
-					<h3>Personal Projects</h3>
-					<p>A collection of software, research, and linguistics projects I've worked on. Where applicable,
-						links to the associated GitHub repository are included.</p>
+            <ul class="project-grid">
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://github.com/WilliamMorales1/IntensifierResearch"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Code to Analyze Intensifiers</a
+                  >
+                </h5>
+                <a
+                  href="../images/projects/intensifiers.webp"
+                  class="pc-shot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="../images/projects/intensifiers.webp"
+                    alt="Line graph of súper usage rate by birth decade, split by city and gender"
+                    loading="lazy"
+                /></a>
+                <p>
+                  A custom Python algorithm developed to collect and analyze
+                  intensifier data from transcripts of Spanish dialects. Used to
+                  support ongoing sociolinguistic research comparing
+                  intensification patterns across different Spanish-speaking
+                  communities. Has been used in multiple conference
+                  presentations and supports a paper published in the
+                  <em>Proceedings of the Linguistic Society of America</em>
+                  11(1) (<a
+                    href="https://doi.org/10.3765/plsa.v11i1.6091"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >doi:10.3765/plsa.v11i1.6091</a
+                  >).
+                </p>
+                <span class="pc-meta"
+                  >Tools: Python, corpus linguistics methods</span
+                >
+              </li>
 
-					<h4>Linguistics &amp; NLP</h4>
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://creole-dictionary.fly.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >An Online Dictionary of Louisiana Creole</a
+                  >
+                </h5>
+                <a
+                  href="../images/projects/creole-dictionary.webp"
+                  class="pc-shot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="../images/projects/creole-dictionary.webp"
+                    alt="Dictionary search results for the Louisiana Creole word kouri"
+                    loading="lazy"
+                /></a>
+                <p>
+                  A web-based dictionary for Louisiana Creole, a critically
+                  endangered language. The goal is to make lexical resources
+                  accessible online to support language documentation and
+                  revitalization efforts. Built in collaboration with members of
+                  the LSU Creole Club.
+                </p>
+                <span class="pc-meta"
+                  >Tools: Django, Valdman Dictionary of Louisiana Creole ·
+                  <a
+                    href="https://github.com/WilliamMorales1/louisiana-creole-online-dictionary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Source</a
+                  ></span
+                >
+              </li>
 
-					<ul class="project-grid">
-						<li class="project-card">
-							<h5><a href="https://github.com/WilliamMorales1/IntensifierResearch" target="_blank"
-									rel="noopener noreferrer">Code to Analyze Intensifiers</a></h5>
-							<a href="../images/projects/intensifiers.webp" class="pc-shot" target="_blank" rel="noopener noreferrer"><img src="../images/projects/intensifiers.webp" alt="Line graph of súper usage rate by birth decade, split by city and gender" loading="lazy"></a>
-							<p>
-								A custom Python algorithm developed to collect and analyze intensifier data from transcripts of
-								Spanish dialects. Used to support ongoing sociolinguistic research comparing intensification
-								patterns across different Spanish-speaking communities. Has been used in multiple conference
-								presentations and supports a paper published in the <em>Proceedings of the Linguistic Society of America</em> 11(1)
-								(<a href="https://doi.org/10.3765/plsa.v11i1.6091" target="_blank" rel="noopener noreferrer">doi:10.3765/plsa.v11i1.6091</a>).
-							</p>
-							<span class="pc-meta">Tools: Python, corpus linguistics methods</span>
-						</li>
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://github.com/WilliamMorales1/SpanishFutureResearch"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Spanish Future Tense Research</a
+                  >
+                </h5>
+                <p>
+                  A Python-based project for analyzing expressions of the future
+                  tense in Spanish corpora. Includes scripts for data cleaning,
+                  grammatical tagging, and building structured dataframes from
+                  raw corpus data to support quantitative sociolinguistic
+                  analysis.
+                </p>
+                <span class="pc-meta">Tools: Python, pandas</span>
+              </li>
 
-						<li class="project-card">
-							<h5><a href="https://creole-dictionary.fly.dev/" target="_blank"
-									rel="noopener noreferrer">An Online Dictionary of Louisiana Creole</a></h5>
-							<a href="../images/projects/creole-dictionary.webp" class="pc-shot" target="_blank" rel="noopener noreferrer"><img src="../images/projects/creole-dictionary.webp" alt="Dictionary search results for the Louisiana Creole word kouri" loading="lazy"></a>
-							<p>
-								A web-based dictionary for Louisiana Creole, a critically endangered language. The goal is to
-								make lexical resources accessible online to support language documentation and revitalization
-								efforts. Built in collaboration with members of the LSU Creole Club.
-							</p>
-							<span class="pc-meta">Tools: Django, Valdman Dictionary of Louisiana Creole · <a href="https://github.com/WilliamMorales1/louisiana-creole-online-dictionary" target="_blank" rel="noopener noreferrer">Source</a></span>
-						</li>
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://github.com/WilliamMorales1/PraatDataAnalysis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Praat Data Analysis Scripts</a
+                  >
+                </h5>
+                <p>
+                  A collection of Praat scripts used for collecting and
+                  analyzing audio data in a study on dialectal variation and
+                  perception of English sounds. Handles batch WAV file
+                  processing and automates acoustic measurements that would
+                  otherwise need to be done manually.
+                </p>
+                <span class="pc-meta">Tools: Praat scripting language</span>
+              </li>
 
-						<li class="project-card">
-							<h5><a href="https://github.com/WilliamMorales1/SpanishFutureResearch" target="_blank"
-									rel="noopener noreferrer">Spanish Future Tense Research</a></h5>
-							<p>
-								A Python-based project for analyzing expressions of the future tense in Spanish corpora.
-								Includes scripts for data cleaning, grammatical tagging, and building structured dataframes from
-								raw corpus data to support quantitative sociolinguistic analysis.
-							</p>
-							<span class="pc-meta">Tools: Python, pandas</span>
-						</li>
+              <li class="project-card project-card-wide">
+                <h5>A Short Spanish Podcast about Cultural Representation</h5>
 
-						<li class="project-card">
-							<h5><a href="https://github.com/WilliamMorales1/PraatDataAnalysis" target="_blank"
-									rel="noopener noreferrer">Praat Data Analysis Scripts</a></h5>
-							<p>
-								A collection of Praat scripts used for collecting and analyzing audio data in a study on
-								dialectal variation and perception of English sounds. Handles batch WAV file processing and
-								automates acoustic measurements that would otherwise need to be done manually.
-							</p>
-							<span class="pc-meta">Tools: Praat scripting language</span>
-						</li>
+                <div class="podcast-player" id="podcast-player">
+                  <img
+                    src="../images/podcast.png"
+                    id="podcast-thumb"
+                    crossorigin="anonymous"
+                    alt="Podcast thumbnail"
+                    class="podcast-thumb-img"
+                  />
+                  <div class="podcast-controls">
+                    <button
+                      class="podcast-play-btn"
+                      id="podcast-play-btn"
+                      aria-label="Play/Pause"
+                    >
+                      <svg
+                        id="podcast-play-icon"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        width="26"
+                        height="26"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                      <svg
+                        id="podcast-pause-icon"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        width="26"
+                        height="26"
+                        style="display: none"
+                      >
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                      </svg>
+                    </button>
+                    <div class="podcast-progress-area">
+                      <span class="podcast-time" id="podcast-current"
+                        >0:00</span
+                      >
+                      <input
+                        type="range"
+                        class="podcast-seek"
+                        id="podcast-seek"
+                        min="0"
+                        value="0"
+                        step="0.1"
+                      />
+                      <span class="podcast-time" id="podcast-total">0:00</span>
+                    </div>
+                  </div>
+                </div>
+                <audio
+                  id="podcast-audio"
+                  src="../audios/span_podcast.mp3"
+                  preload="metadata"
+                ></audio>
+                <span class="pc-meta"
+                  >Practice for recording/editing videos</span
+                >
+              </li>
+            </ul>
 
-						<li class="project-card project-card-wide">
-							<h5>A Short Spanish Podcast about Cultural Representation</h5>
+            <h4>Software &amp; App Development</h4>
 
-							<div class="podcast-player" id="podcast-player">
-								<img src="../images/podcast.png" id="podcast-thumb" crossorigin="anonymous"
-									alt="Podcast thumbnail" class="podcast-thumb-img">
-								<div class="podcast-controls">
-									<button class="podcast-play-btn" id="podcast-play-btn" aria-label="Play/Pause">
-										<svg id="podcast-play-icon" viewBox="0 0 24 24" fill="currentColor" width="26"
-											height="26">
-											<path d="M8 5v14l11-7z" />
-										</svg>
-										<svg id="podcast-pause-icon" viewBox="0 0 24 24" fill="currentColor" width="26"
-											height="26" style="display:none">
-											<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-										</svg>
-									</button>
-									<div class="podcast-progress-area">
-										<span class="podcast-time" id="podcast-current">0:00</span>
-										<input type="range" class="podcast-seek" id="podcast-seek" min="0" value="0" step="0.1">
-										<span class="podcast-time" id="podcast-total">0:00</span>
-									</div>
-								</div>
-							</div>
-							<audio id="podcast-audio" src="../audios/span_podcast.mp3" preload="metadata"></audio>
-							<span class="pc-meta">Practice for recording/editing videos</span>
-						</li>
-					</ul>
+            <ul class="project-grid">
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://github.com/claytakiler/Heritage-Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Vivan &mdash; Language Learning Platform</a
+                  >
+                </h5>
+                <p>
+                  Originally built for learning Louisiana Creole (Kouri-Vini),
+                  Vivan has grown into a full language-learning platform where
+                  users can take predefined courses or build and share their
+                  own. Built with a small team as a CSC 4330 project at LSU,
+                  with course creation, collaboration, and 2FA support.
+                </p>
+                <span class="pc-meta"
+                  >Tools: Django, React, Tailwind, ShadCN</span
+                >
+              </li>
 
-					<h4>Software &amp; App Development</h4>
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://github.com/WilliamMorales1/Multilingual-Wordle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Multilingual Wordle</a
+                  >
+                </h5>
+                <a
+                  href="../images/projects/wordle.webp"
+                  class="pc-shot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="../images/projects/wordle.webp"
+                    alt="Multilingual Wordle game in progress in Spanish"
+                    loading="lazy"
+                /></a>
+                <p>
+                  A web-based Wordle game, live at
+                  <a
+                    href="https://multilingual-wordle.fly.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >multilingual-wordle.fly.dev</a
+                  >, supporting 70+ languages from Wiktionary — including
+                  Spanish, Russian, Arabic, Thai, and more. Handles grapheme
+                  clusters, abugidas, and RTL scripts correctly, with word lists
+                  cached locally after first download.
+                </p>
+                <span class="pc-meta">Tools: Go, TypeScript</span>
+              </li>
 
-					<ul class="project-grid">
-						<li class="project-card">
-							<h5><a href="https://github.com/claytakiler/Heritage-Project" target="_blank"
-									rel="noopener noreferrer">Vivan &mdash; Language Learning Platform</a></h5>
-							<p>
-								Originally built for learning Louisiana Creole (Kouri-Vini), Vivan has grown into a full
-								language-learning platform where users can take predefined courses or build and share their
-								own. Built with a small team as a CSC 4330 project at LSU, with course creation, collaboration,
-								and 2FA support.
-							</p>
-							<span class="pc-meta">Tools: Django, React, Tailwind, ShadCN</span>
-						</li>
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://github.com/WilliamMorales1/Swadesh-Word-A-Day"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Swadesh Word-A-Day</a
+                  >
+                </h5>
+                <p>
+                  A Python tool that scrapes Wiktionary's Swadesh list
+                  appendices across 200+ languages to build a vocabulary
+                  dataset, then sends a daily word-of-the-day push notification
+                  via ntfy.sh. Scraping is parallelized across 8 workers,
+                  supports filtering to the 30 most-spoken languages, and is
+                  designed to run on a cron schedule.
+                </p>
+                <span class="pc-meta">Tools: Python, ntfy.sh</span>
+              </li>
 
-						<li class="project-card">
-							<h5><a href="https://github.com/WilliamMorales1/Multilingual-Wordle" target="_blank"
-									rel="noopener noreferrer">Multilingual Wordle</a></h5>
-							<a href="../images/projects/wordle.webp" class="pc-shot" target="_blank" rel="noopener noreferrer"><img src="../images/projects/wordle.webp" alt="Multilingual Wordle game in progress in Spanish" loading="lazy"></a>
-							<p>
-								A web-based Wordle game, live at <a href="https://multilingual-wordle.fly.dev/" target="_blank"
-									rel="noopener noreferrer">multilingual-wordle.fly.dev</a>, supporting 70+ languages from
-								Wiktionary — including Spanish, Russian, Arabic, Thai, and more. Handles grapheme clusters,
-								abugidas, and RTL scripts correctly, with word lists cached locally after first download.
-							</p>
-							<span class="pc-meta">Tools: Go, TypeScript</span>
-						</li>
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://github.com/WilliamMorales1/Natural-Syntax-LSP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Natural Syntax LSP</a
+                  >
+                </h5>
+                <a
+                  href="../images/projects/natural-syntax-lsp.webp"
+                  class="pc-shot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="../images/projects/natural-syntax-lsp.webp"
+                    alt="VS Code editor with part-of-speech highlighting and a hover definition"
+                    loading="lazy"
+                /></a>
+                <p>
+                  Parts-of-speech, semantic-embedding, or dependency-parse
+                  highlighting for VS Code via a local Go LSP server running
+                  ONNX inference (BERT/MobileBERT, MPNet/MiniLM, or a biaffine
+                  UD parser). Hover any word for its tag, head/dependents, and a
+                  Wiktionary definition.
+                </p>
+                <span class="pc-meta"
+                  >Tools: Go, ONNX Runtime, Python, TypeScript (VS Code
+                  Extension)</span
+                >
+              </li>
 
-						<li class="project-card">
-							<h5><a href="https://github.com/WilliamMorales1/Swadesh-Word-A-Day" target="_blank"
-									rel="noopener noreferrer">Swadesh Word-A-Day</a></h5>
-							<p>
-								A Python tool that scrapes Wiktionary's Swadesh list appendices across 200+ languages to build a
-								vocabulary dataset, then sends a daily word-of-the-day push notification via ntfy.sh. Scraping
-								is parallelized across 8 workers, supports filtering to the 30 most-spoken languages, and is
-								designed to run on a cron schedule.
-							</p>
-							<span class="pc-meta">Tools: Python, ntfy.sh</span>
-						</li>
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://www.businessreport.com/business/lsu-ai-showcase-baton-rouge-business-2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GuideOverride</a
+                  >
+                </h5>
+                <p>
+                  Collaboration with Baton Rouge Community College to streamline
+                  student course-override requests using an LLM recommendation
+                  workflow. Featured in the
+                  <a
+                    href="https://www.businessreport.com/business/lsu-ai-showcase-baton-rouge-business-2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Business Report LSU AI Showcase</a
+                  >.
+                </p>
+                <span class="pc-meta"
+                  >Tools: Django, SQLite, React, OpenAI, Tailwind</span
+                >
+              </li>
 
-						<li class="project-card">
-							<h5><a href="https://github.com/WilliamMorales1/Natural-Syntax-LSP" target="_blank"
-									rel="noopener noreferrer">Natural Syntax LSP</a></h5>
-							<a href="../images/projects/natural-syntax-lsp.webp" class="pc-shot" target="_blank" rel="noopener noreferrer"><img src="../images/projects/natural-syntax-lsp.webp" alt="VS Code editor with part-of-speech highlighting and a hover definition" loading="lazy"></a>
-							<p>
-								Parts-of-speech, semantic-embedding, or dependency-parse highlighting for VS Code via a
-								local Go LSP server running ONNX inference (BERT/MobileBERT, MPNet/MiniLM, or a biaffine
-								UD parser). Hover any word for its tag, head/dependents, and a Wiktionary definition.
-							</p>
-							<span class="pc-meta">Tools: Go, ONNX Runtime, Python, TypeScript (VS Code Extension)</span>
-						</li>
+              <li class="project-card">
+                <h5>
+                  <a
+                    href="https://github.com/WilliamMorales1/OutOfTheAbyssDMTracker"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Out of the Abyss DM Companion</a
+                  >
+                </h5>
+                <a
+                  href="../images/projects/abyss-dm-tracker.webp"
+                  class="pc-shot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="../images/projects/abyss-dm-tracker.webp"
+                    alt="Out of the Abyss DM Companion initiative tracker"
+                    loading="lazy"
+                /></a>
+                <p>
+                  A local web app for running the
+                  <em>Out of the Abyss</em> D&amp;D 5e campaign. Tracks NPCs,
+                  monsters, sessions, maps, and initiative, with a local-LLM
+                  chat assistant and semantic lore search powered by Ollama.
+                </p>
+                <span class="pc-meta"
+                  >Tools: Go, TypeScript, SQLite, Ollama</span
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <section id="footer">
+      <div class="container">
+        <ul class="copyright">
+          <li>
+            &copy; William Morales.
+            <a
+              href="https://github.com/WilliamMorales1/WilliamMorales1.github.io/blob/main/LICENSE"
+              target="_blank"
+              rel="noopener noreferrer"
+              >MIT License</a
+            >
+          </li>
+          <li>
+            Design based on
+            <a
+              href="http://html5up.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              >HTML5 UP</a
+            >
+            (modified)
+          </li>
+        </ul>
+      </div>
+    </section>
 
-						<li class="project-card">
-							<h5><a href="https://www.businessreport.com/business/lsu-ai-showcase-baton-rouge-business-2026"
-									target="_blank" rel="noopener noreferrer">GuideOverride</a></h5>
-							<p>
-								Collaboration with Baton Rouge Community College to streamline student course-override
-								requests using an LLM recommendation workflow. Featured in the
-								<a href="https://www.businessreport.com/business/lsu-ai-showcase-baton-rouge-business-2026"
-									target="_blank" rel="noopener noreferrer">Business Report LSU AI Showcase</a>.
-							</p>
-							<span class="pc-meta">Tools: Django, SQLite, React, OpenAI, Tailwind</span>
-						</li>
-
-						<li class="project-card">
-							<h5><a href="https://github.com/WilliamMorales1/OutOfTheAbyssDMTracker" target="_blank"
-									rel="noopener noreferrer">Out of the Abyss DM Companion</a></h5>
-							<a href="../images/projects/abyss-dm-tracker.webp" class="pc-shot" target="_blank" rel="noopener noreferrer"><img src="../images/projects/abyss-dm-tracker.webp" alt="Out of the Abyss DM Companion initiative tracker" loading="lazy"></a>
-							<p>
-								A local web app for running the <em>Out of the Abyss</em> D&amp;D 5e campaign. Tracks NPCs,
-								monsters, sessions, maps, and initiative, with a local-LLM chat assistant and semantic lore
-								search powered by Ollama.
-							</p>
-							<span class="pc-meta">Tools: Go, TypeScript, SQLite, Ollama</span>
-						</li>
-					</ul>
-				</div>
-			</section>
-		</div>
-	</div>
-	<section id="footer">
-		<div class="container">
-			<ul class="copyright">
-				<li>&copy; William Morales. <a href="https://github.com/WilliamMorales1/WilliamMorales1.github.io/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
-				<li>Design based on <a href="http://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a> (modified)</li>
-			</ul>
-		</div>
-	</section>
-	</div>
-
-	<script src="../assets/js/jquery.min.js"></script>
-	<script src="../assets/js/jquery.scrollex.min.js"></script>
-	<script src="../assets/js/jquery.scrolly.min.js"></script>
-	<script src="../assets/js/browser.min.js"></script>
-	<script src="../assets/js/breakpoints.min.js"></script>
-	<script src="../assets/js/util.js"></script>
-	<script src="../assets/js/main.js"></script>
-	<script src="../assets/js/podcast.js"></script>
-	<div id="google_translate_element" style="display:none"></div>
-	<script>
-		function googleTranslateElementInit() {
-			new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
-		}
-	</script>
-	<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/podcast.js"></script>
+    <div id="google_translate_element" style="display: none"></div>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en", autoDisplay: false },
+          "google_translate_element",
+        );
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
 </html>
